@@ -17,85 +17,32 @@
 
 \section{Resumo}
 
-Engenharia reversa em grandes sistemas de software é uma tarefa difícil.
-
-Entretanto é um pre-requisito para manutenção reengenharia e evolução.
-
-Manter e evoluir softwares existentes é uma tarefa difícil por várias razões.
-
-Estes sistemas legados são grandes, maduros e complexos, são resultados de longo tempo de investimento e precisam ser pagos.
-
-A maioria destes sistemas legados sofrem problemas típicos, incluindo desenvolvedores originais não mais disponíveis, métodos de desenvolvimento ou linguagens ultrapassadas, ou documentação desatualizada, incompleta ou inexistente.
-
-A manutenção e evolução destes sistemas são pribitivamente caros.
-
-O custo de manutenção gira em torno de 50 a 70\% do valor total do software.
-
-Assim é necessário abordagens eficientes na melhoria do entendimento do sistema e de descoberta de problemas.
-
-Engenheiro "de engenharia reversa" precisa entender a estrutura do sistema, é dado foco em uma ferramenta para ajudar a ter uma figura mental do sistema, a partir de "polymetric views" (leve visualização de software enriquecida com métricas).
-
-A combinação de visualização de software com métricas de software dá o poder de entendimento visual aliado a rica informação fornecida pelas métricas que usualmente são de difícil interpretação quando vem em apenas forma texto ou tabelas.
-
-A esta combinação é dada o nome "polymetric views". (página 2)
-
-No artigo é descrito vários "polymetric views" diferentes.
-
-Para guiar a engenharia reversa, nas suas primeiras semanas, criou-se uma metologia com base nos "polymetric views", onde foi usado em vários casos reais da indústria.
-
-Antes de se iniciar o preocesso de engenharia reversa em um sistema é preciso definir o objetivo principal e secundários.
-
-O resultado final da engenharia reversa não é apenas uma lista de classes e subclasses problemáticas, mas dá uma visão mental do sistema e joga luz em que partes do sistema estão boas ou ruins, deixando a cargo do projetista fazer reengenharia nestas partes ou não.
-
-A abordagem da pesquisa foi feita em cima do projeto FAMOOS, visando: simplicidade, escalabilidade, independencia de linguagem.
-
-Um "polymetric view" é uma representacao grafica das métricas de um software, especificamente projetos OO. Na teoria o processo de renderizar metricas em nós de 2-dimensões é chamado "measurement mapping".
-
-Foram utilizadas apenas métricas de medição direta, nos testes foram as que melhor se comportaram na visualização gráfica.
-
-A visualização depende de tres ingredientes: layout, conjunto de métricas e conjunto de entidades.
-
-Polymetric views são reveladores de sintomas sobre o projeto, sintomas que são apenas vistos de maneira visual.
-
-Nem todos os modelos de "polymetric views" são uteis para o processo de engenharia reversa, alguns não dão informações úteis para esta atividade, o artigo enumera quais são importantes para isto.
-
-Vários tipode de visualizacao ajuda em tarefas e dao visões distintas, como SYSTEM HOTSPO ou SYSTEM COMPLEXITY que dao visao geral, INHERITANCE CLASSIFICATION ou INHERITANCE CARRIER dao visoes sobre hierarquia e herancas, ou DATA STORAGE CLASS DETECTION, METHOD STRUCTURE CORRELATION, DIRECT ATRIBUTE ACCESS dao nocoes sobr eonde deve ser feito reengenharia ou precisam ser investigadas. Ou ainda CLASS BLUEPRINT para ajudar no entendimento de classes e seus detalhes internos, apesar de que varios outras visualizacoes também ajudam neste sentido.
-
-A engenharia reversa de um sistema é um procedimento não-linear
-
-Muitas inferencias podem ser feitas a partir das varias visualizações: como metodos acima do tamanho recomendado, ou classes com muitas responsabilidades, ou hierarquias nao recomendadas, etc...
-
-O estudo com o Duploc identificou classes chave que precisa mser olhadas de perto, o desenvolvedor do Duploc confirmou a maior parte das conclusões do estudo de caso do artigo, e ficou surpreso como foi possivel chegar a estes resultados em menos de 2 dias.
-
-Pois de fato, o maior problema em grandes sistemas é o endentimento inicial de sua arquitetura sem se perder em sua complexidade.
-
-A ferramenta e estudos foram aplicados em varios softwares industriais, tendo resultado positivo quando a indicar possíveis refatorações, ou simplesmente indicando visões sobre o arquiterura do sistema.
-
-O resultado tipico de todo estudo de caso é um relatório contendo conjunto de polymetri views e uma lista de possiveis problemas e erros. Os desenvolvedores originais gostaram destes relatorio e usualmente se utilizaram dos resultados para documentar seus projetos.
-
-Uma lição aprendida em todos os estudos de caso é que nenhum deles é típico ou normal.
-
-O trabalho é uma mistura de duas abordagens: visualização de software e métricas.
-
-Este artigo apresenta polymetric views, e propoe uma metodologia baseada em cluster (grupos) de visualizacoes para detectar problemas.
-
-A ferramenta CodeCrowler foi utilizada com sucesso em vários projetos do mund oreal.
-
-Finally, we have used our methodology by applying
-different views and have reverse engineered a case study.
-We have been able to understand different aspects of the
-case study, among which an overview of the application, a
-discussion on the used inheritance mechanisms, the detec-
-tion of design patterns, the detection of several places where
-in-depth examinations are needed, as well as propositions
-on where possible refactorings could be applied.
-
-Foi visto também que engenhari reversa não é um processo sistemático, é necessário interações, e avaliação de código.
-
-A abordagem é especialmente interessante na fase inicial da reengenharia, para dar entendimento geral do sistema. Mas pode ser continuamente utilizado nas fases seguintes, mas não foi utilizado neste trabalho.
-
-Trabalhos futuros (CodeCrowler): suporte a linguagens especificas; novas entidades e relacionamentos (como exemplo agrupar relacionamento por nome); usabilidade e navegação; visualizações 3D; integracao com ferramentas de desenvolvimento.
-
+A engenharia reversa em grandes sistemas de software tem se tornado um assunto
+de grande relevancia devido a sua importancia no auxílio a tarefas de
+manutenção, re-engenharia e evolução. Manter e evoluir sistemas legados é uma
+tarefa inerentemente difícil por diversas razões, estes sistemas são grandes,
+maduros e complexos, e são resultado de um longo tempo de investimento e
+precisam ser pagos. Além de sofrer problemas típicos, como a saída de
+desenvolvedores, o uso de métodos de desenvolvimento ou linguagens
+ultrapassadas, ou ainda documentação desatualizada, incompleta ou inexistente.
+Diante disso fica claro que ter uma abordagem de apoio as tarefas de
+manutenção, re-engenharia e evolução torna-se extremamente necessária afim de
+reduzir custos e possibilitar a sua execução, com isto em mente é proposto
+modelos de visualizações de software chamados de "polymetric views", uma
+visualização de software simples enriquecida com métricas, esta combinação
+oferece o poder de entendimento visual fornecido pelas visualizações aliado a
+rica informação fornecida pelas métricas que usualmente são de difícil
+interpretação quando sozinhas. Através de "polymetric views" foi criada uma metodologia de
+engenharia reversa em sistemas de software que oferece como resultado final uma
+visão geral de um sistema e joga luz em que partes estão boas ou ruins,
+deixando a cargo do projetista fazer reengenharia nestas partes ou não. Este
+resultado é alcançado através da ferramenta desenvolvida durante a pesquisa,
+chamada CodeCrawler, uma ferramenta par avisualização de softwares... os casos
+de uso e contribuicoes para os desenvolvedores originais. O resultado tipico de
+todo estudo de caso é um relatório contendo conjunto de polymetri views e uma
+lista de possiveis problemas e erros. Os desenvolvedores originais gostaram
+destes relatorio e usualmente se utilizaram dos resultados para documentar seus
+projetos.
 
 \section{Questoes}
 
