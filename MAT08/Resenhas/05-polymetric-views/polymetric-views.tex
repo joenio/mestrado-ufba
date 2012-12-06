@@ -5,7 +5,6 @@
 \usepackage[margin=0.7in]{geometry}
 \bibliographystyle{ieeetr}
 
-
 \title{Resenha: Polymetric Views - A Lightweight Visual Approach to Reverse Engineering\cite{PolymetricViews} \\
  \large MAT08 - Evolução de Software (2012.2)}
 \author{Joenio Marques da Costa}
@@ -18,37 +17,29 @@
 \section{Resumo}
 
 A engenharia reversa em grandes sistemas de software tem se tornado um assunto
-de grande relevancia devido a sua importancia no auxílio a tarefas de
-manutenção, re-engenharia e evolução. Manter e evoluir sistemas legados é uma
-tarefa inerentemente difícil por diversas razões, estes sistemas são grandes,
-maduros e complexos, e são resultado de um longo tempo de investimento e
-precisam ser pagos. Além de sofrer problemas típicos, como a saída de
-desenvolvedores, o uso de métodos de desenvolvimento ou linguagens
-ultrapassadas, ou ainda documentação desatualizada, incompleta ou inexistente.
-Diante disso fica claro que ter uma abordagem de apoio as tarefas de
-manutenção, re-engenharia e evolução torna-se extremamente necessária afim de
-reduzir custos e possibilitar a sua execução, com isto em mente é proposto
-modelos de visualizações de software chamados de "polymetric views", uma
-visualização de software simples enriquecida com métricas, esta combinação
-oferece o poder de entendimento visual fornecido pelas visualizações aliado a
-rica informação fornecida pelas métricas que usualmente são de difícil
-interpretação quando sozinhas. Através de "polymetric views" foi criada uma metodologia de
-engenharia reversa em sistemas de software que oferece como resultado final uma
-visão geral de um sistema e joga luz em que partes estão boas ou ruins,
-deixando a cargo do projetista fazer reengenharia nestas partes ou não. Este
-resultado é alcançado através da ferramenta desenvolvida durante a pesquisa,
-chamada CodeCrawler, uma ferramenta par avisualização de softwares... os casos
-de uso e contribuicoes para os desenvolvedores originais. O resultado tipico de
-todo estudo de caso é um relatório contendo conjunto de polymetri views e uma
-lista de possiveis problemas e erros. Os desenvolvedores originais gostaram
-destes relatorio e usualmente se utilizaram dos resultados para documentar seus
-projetos.
+de grande relevancia devido a importancia no auxílio a tarefas de manutenção,
+re-engenharia e evolução de software. Manter grandes sistemas é uma tarefa
+inerentemente difícil, estes sistemas são complexos e sofrem de problemas
+típicos, como: saída de desenvolvedores, uso de métodos ou linguagens
+ultrapassadas, documentação desatualizada, incompleta ou inexistente. Manter e
+evoluir estes sistemas tem sido por vezes proibitivamente caros, estudos
+mostram que o custo de manutenção pode chegar a 75\% do valor total do projeto,
+neste sentido fica claro que soluções de apoio a manutenção e evolução de
+softwares são extremamente úteis e desejáveis, desta forma surge uma
+metodologia de engenharia reversa baseada em visualizações de software
+combinadas com métricas, a esta combinação dá-se o nome de {\it polymetric
+views}. Esta metologia traz como resultado final uma visão geral do sistema e
+joga luz em quais partes estão boas ou ruins, deixando a cargo do projetista
+decidir o que fazer com elas. Estes resultados são obtidos através da um
+processo baseado na ferramenta CodeCrawler desenvolvida durante as pesquisas,
+esta ferramenta de visualização de software foi desenvolvida com objetivo de
+ser extensível, interativa e escalável, além de permitir a verificação de
+trechos de código-fonte relacionados aos resultados obtidos.
 
 \section{Questoes}
 
 \begin{itemize}
-  \item Como está o estado atual desta ferramente CodeCrowler? Ela pode ser utilzada com segurança?
-  \item Esta proposta de visualização chamada "polymetric views" continua a ser utilizada em outros estudos?
+  \item Esta de visualização chamada {\it polymetric views} foi adotada em outros estudos?
 \end{itemize}
 
 \bibliography{bibliografia}
