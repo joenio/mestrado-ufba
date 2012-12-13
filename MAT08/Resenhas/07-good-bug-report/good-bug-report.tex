@@ -16,78 +16,36 @@
 
 \section*{Resumo}
 
-Em desenvolvimento, bug report fornece informação crucial, entretanto o bug reportado varia enormemente em sua qualidade.
-Fizemos uma pesquisa entre usuários e desenvolvedores dos projetos APACHE, ECLIPSE e MOZILLA para descobrir o que é um bom bug report.
-As respostas dadas revelam a incompatibilidade entre o que os desenvolvedores precisam e o que os usuários fornecem.
-Esta percepção é útil para guiar o desenvolvimento de ferramentas de bug report que guiam o usuário a fornecer as informações requeridas pelo desenvolvedor.
-O protótipo CUEZILLA é uma ferramenta neste sentido que mede a qualidade de novos bug report, também recomenda quais elementos devem ser adicionados para melhorar a qualidade.
-
-
-Bug reports são vitais para qualquer projeto de desenvolvimento de software, permite usuários informar aos desenvolvedores problemas encontrados durante o uso. Entretando bug reports variam em qualidade do conteúdo, frequentemente fornecem informações insuficientes ou incorretas. Não é surpresa que isto retarda o trabalho dos desenvolvedores pois é necessário investigar para descobrir o erro.
-
-Neste artigo investigamos a qualidade dos bug reports da perspectiva dos desenvolvedores. Esperávamos encontrar vários fatores que influeciam nesta qualidade, para encontrar os que importam mais fizemos uma pesquisa de opinião entre 872 desenvolvedores das 3 comuniades pesquisadas.
-
-Ainda conduzimos as mesmas perguntas a um grupo de 1354 pessoas que reportam bugs e não são desenvolvedores dos projetos, destes 310 responderam.
-
-Ambas as pesquisas demonstraram que há um desencontro entre o que os desenvolvedores precisam e o que é reportado pelos usuários.
-
-Para uma rápida resolução de bugs é preciso reduzir este desencontro de informações, por exemplo com ferramentas que dêem suporte aos usuários ao reportar bugs mais completos e valiosos.
-
-Um protótipo chamado CUIZILLA foi desenvolvido neste sentido, ele avalia a qualidade do bug report e sugere o que é preciso fornecer para melhorar a qualidade.
-
-Algumas perguntas foram feitas a desenvolvedores, exemplo: Quais itens tem os desenvolvedores usado quando resolvem bugs? Quais 3 itens melhor ajudam a resolver? Quais os principais problemas que causam atraso na solução de bugs?
-
-Problemas tipicos são informações incorretas, como sistema operacional errado, linguagem ruim, bugs duplicados, ambiguidade, spams recentemente também se tornaram um problema.
-
-Basicamente as mesmas perguntas foram feitas tanto para desenvolvedores quanto para usuários, mas com objetivos deiferentes, dando opções de escolhas diferentes, isto com objetico especifico de cruzar as respostas.
-
-Os resultados mostram que os items mais usados entre os projetos são: passos para reproduzir; comportamento observado e experado; rastros de execução e casos de testes. Informações raramente utilizadas pelos desenvolvedores são: hardware e severidade.
-
-Entre os usuários que reportam bugs, consideram que passos para reproduzir realmente é importante, mas frequentemente não fornecem esta imformação pela doficulade em documentar o mesmo; isto sugere que ferramentas que reproduzem bugs e gravam caso de testes devem ser integrados a ferramentas de bug report.
-
-Foram comparados os resultados da pesquisa com os desenvolvedores e com os usuários para identificar onde concordam a respeito de um bom bug report, com base na correlação Spearman é notável que as informações dadas pelos usuários e requeridas pelos desenvolvedores está longe de ser ideal. E taambém que usuários não focam nas informações importantes para os desenvolvedores.
-
-Entretando é visto que os usuários sabem as informações importantes para os desenvolvedores, então falta de conhecimento dos usuários nãop é uma razão válida para esta distancia.
-
-A partir de todos os resultados foi desenvolvido o prototipo CUELIZZA com objetivo de incentivar e ajudar os usuarios a melhorar a qualidade dos seus bug reports, como por exmeplo perguntaodo: voce pensou em adicionar um screenshot a este bug report?
-
-A ferramenta tambem analisa as entradas do bug report forneeido pelo usuario da seguinte forma: verifica itens lista de items no conteudo, detecta palavras relevantes dentro do conteudo, detecta trecho de codigo anexado ou stack traces, patches, screenshots.
-
-Os resultados mostram que os modelos treinados pelo CUEZILLA podem ser transferidos entre projetos, sem muita perda de predição.
-
-A motivação centrao por traz do CUEZILLA é ajudar usuários a rportar bugs com melhor qualidade para os desenvolvedores.
-
-Quais itens presentes num bug report tem maiores chances de ser consertados?
-
-As conclusões da avaliação de como incentivar usuarios a reportar melhor bugs são:
-
-bug report contendo stack traces sao resolvidos mais rapidamente
-
-bug report com boa escrita e compreensao tem tempo de vida mais curto (sao resolvidos logo)
-
-adicionar exemplos de codigo aumentam as changes de ser resolvido
-
-Como em muitos estudos empiricos é dificil de desenhas conclusoes gerais porque qualquer processo depende do contexto, foi estudaso 3 projetos de FLOSS, enretando nao se sabe se as conclusoes podem ser aplicadas a projetos de desenvolvimento fechado, proprietarios.
-
-A common misinterpretation of empirical studies is that noth-
-ing new is learned (“I already knew this result”). Unfortunately,
-some readers miss the fact that this wisdom has rarely been shown
-to be true and is often quoted without scientific evidence. This
-paper provides such evidence: most common wisdom is confirmed
-(e.g., “steps to reproduce are important”) while others is challenged
-(“bug duplicates considered harmful”).
-
-Apesar de as conclusoes serem ja esperadas, o artigo esquematiza cientificamente um metodo para analisar sobre a qualidade e os problemas de bug reports, quais os principais problemas, e um prototipo de proposta de solucao.
-
-Eu achei o artigo interessante e concordo com a validade em se estudar o assunto, não me trouxe nenhuma informação nova pois já esperava que estudos sobre bug reports realmente sofrem de falta de informacoes estruturadas, mas é novidade para mim que os usuarios nã oreportam bons bugs por fala de conhecimento e sim por dificuldade em obter os dados necessarios.
-
-Confirmou minha duvida sobre dificuldade em minerar dados desta natureza pois cada projeto tem seus proprios processos e nomeclaturas.
+{\it Bug reports} são vitais para o processo de desenvolvimento de qualquer
+projeto de software, com ele é possível informar aos desenvolvedores sobre
+problemas encontrados durante o seu uso, dada a importancia dos {\it bug
+reports} foi realizada uma pesquisa de opinião entre desenvolvedores e usuários
+de 3 projetos de software livre diferentes com objetivo de avaliar a qualidade
+dos {\it bug reports} sob a perspectiva dos desenvolvedores, participaram da
+pesquisa 872 desenvolvedores e 1354 usuários. As respostas obtidas demonstram
+que há um forte desencontro entre o que os desenvolvedores precisam e o que é
+reportado pelos usuários, a fim de reduzir este desencontro foi desenvolvida
+uma ferramenta chamada {\it CUEZILLA} com objetivo de apoiar os usuários ao
+reportar {\it bugs} incentivando e sugerindo que se forneçam informações mais
+completas, ele avalia a qualidade do {\it bug report} e sugere por exemplo que
+o usuário adicione um screenshot sobre o problema relatado. As perguntas
+oferecidas aos desenvolvedores e usuários foram basicamente as mesmas, e os
+resultados mostram que a falta de informação nos {\it bug reports} se dá
+principalmente pela dificuldade em coletar os dados necessárias para tal, isto
+sugere que ferramentas de apoio neste sentido são extremamente necessárias e o
+{\it CUEZILLA} se mostra bastante útil nisso. Apesar das conclusões obtidas é
+difícil em estudos empíricos como este esboçar conclusões mais gerais, sabe-se
+que é possível por exemplo replicar estas conclusões em outros projetos de
+software livre, entretando não se sabe é possível fazer o mesmo em projetos de
+software proprietário. Eu achei o artigo bastante interessante e não consigo
+discordar em nada do que foi posto, apesar disso o estudo não me trouxe nenhuma
+informação nova.
 
 \section*{Questoes}
 
 \begin{itemize}
-  \item q1?
-  \item q2?
+  \item Análise de informações envolvendo {\it bug reports} parecem sempre
+    depender de estudo empíricos, isto é verdade?
 \end{itemize}
 
 \bibliography{bibliografia}
