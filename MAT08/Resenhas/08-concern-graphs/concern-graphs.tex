@@ -17,13 +17,37 @@
 
 \section*{Resumo}
 
-...
-
-\section*{Questoes}
-
-\begin{itemize}
-  \item q?
-\end{itemize}
+Alcançar um bom design num sistema de software envolve, entre outras coisas,
+numa boa modularização, através da qual facilitará tarefas típicas de
+manutenção e evolução, permitindo que desenvolvedores alterem partes do código
+de maneira segura sem interferir em outras partes do mesmo sistema.
+Infelizmente, frequentemente desenvolvedores se deparam designs de software
+inadequados, o que dificulta tarefas de manutenção e evolução, muitas
+abordagens estão disponíveis tentar auxiliar o engenheiro de software em
+localizar pontos a serem alterados num sistema com design ruim, análise lexica
+(grep, etc), ou pesquisa no sistema de controle de versões.  Entretanto todas
+essas abordagens levam ao mesmo resultado: o desenvolvedor é apresentado a
+linhas de código-fonte, este processo é trabalhoso e dificulta localizar os
+conceitos no código-fonte. Neste artigo apresentamos Grafos de Conceitos, uma
+representação de conceitos mais efetiva que simples linhas de código-fonte ao
+tratar de documentação e análiza de conceitos. O objetivo foi ter uma
+representação dos conceitos que requer pouco esforço para criar, manipular e
+analizar, e que tenha uma conversão direta de volta ao código-fonte. Para
+validar a possibilidade de aplicação de grafo de conceitos criou-se uma
+ferramenta chamada FEAT, ela interativamente cria, analiza e visualiza grafos
+de programas escrito em Java. Em um cenário comum o desenvolvedor percorre os
+arquivos de código-fonte de forma manual em busca dos conceitos, visando
+entender onde é preciso fazer uma alteração. Através da ferramenta FEAT o
+desenvolvedor apenas monta um modelo com apoio da ferramente que será então
+convertido no Grafo de Conceito. Para validar a efetividade da ferramenta na
+criacao do Grafo de Conceitos foram feitos vários estudos de caso onde
+comprovaram a eficácia dando ao desenvolvedor a visao necessária para fazer a
+alteração requerida, todo código analisado para montar o grafo é de interesse
+do conceito pesquisado, o numero de falso positivos foi baixo. Não vejo
+pontos fracos no artigo e apesar de achar válido não concordo com a
+real necessidade de ferramentas de apoio deste tipo aos desenvolvedores,
+creio que conhecimento técnico e experiência de desenvolvimento são
+os ingredientes comuns para manter e evoluir projetos de software.
 
 \bibliography{bibliografia}
 \end{document}
