@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{An Empirical Investigation into the Role of API-Level Refactorings
+ during Software Evolution\cite{AnEmpiricalInvestigation} \\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{10 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+Refatoração é o processo de alteração do design de um sistema sem modificar seu
+comportamento, a fim de melhorar sua manutenção, entendimento e evolução. A
+falta de refatoração gera débito técnico e conduz ao aumento da complexidade do
+sistema ao longo do tempo, a aplicação de refatoração será compensado no futuro
+pela redução da crescente complexidade do sistema. A sabedoria popular diz que
+engenheiros de software evitam refatorações em favor de resolução de bugs e
+desenvolvimento de novas features quando se tem poucos recursos. Alguns estudos
+questionam os benefícios da refatoração, sugerindo que um alto índice de
+refatoração vem seguida de um crescente indice de bug reports ou que o número
+de defeitos decresce se o número de refatorações cresce em um certo tempo.
+
+O objetivo deste artigo é sistematicamente investigar o papel da refatoração durante a evolução do software examinando as relações entre refatorações, correção de bugs, tempo de resolução de bugs, e ciclo de releases.
+
+Foi investigado o número de resolução de bugs e o tempo de resolução dos mesmos dentro de uma janela de K revisões antes e depois de um release.
+
+Algumas hipoteses foram levantadas a respeito de refatoração na API do software:
+
+H1: Existem mais bugs depois de uma refatoração na API-level?
+
+Encontramos que o índice de resolução de bugs é maior que o período que antecede a refatoração.
+
+H2: Refatoração no API-level melhora produtividade dos desenvolvedores?
+
+O tempo tomado para resolver bugs reduziu entre 35\% e 63\% depois da refatoração.
+
+H3: Refatoracao na API-level facilita a resolução de bugs?
+
+Refatoração tanto inclui novos bugs quanto facilita a resolução de outros que eram difíceis de resolver sem refatoração.
+
+H4: Existem relativamente poucas refatorações em API-level antes de major releases?
+
+Existem mais refatorações antes de major releases do que depois, o resultado surpreende pois mostra que desenvolvedores não evitam refatoração mesmo perto do deadline, nós especulamos que o trabalho de refatoração é feito junto e para facilitar a resolução de bugs.
+
+Estes resultados chamam para uma investigação em profundidade para os reais benefícios da refatoração e seus impactos economicos em relação aos investimentos.
+
+Alguns estudos empiricos foram feitos sobre refatoracao, alguns com um foco diferenciado deste artigo, mas ainda assim chegam a conclusoes parecidas, commits grandes, que sao geralmente resultado de refatoracao, tem grandes chances de incluir bugs.
+
+Pelo fato de refatoração ser geralmente tediosa e propensa a erros, algumas IDEs trazem ferramentas de automatização de refatoração para suporte aos desenvolvedores, entretando estudos mostram que severas limitações em ferramentas deste tipo.
+
+Um número de técnicas existentes para endereçar o problema de inferencia automática de refatoração. Estas técnicas comparam elementos de código e similaridade de estruturas.
+
+Extração e análise de histórico de bug, existem 2 técnicas bem conhecidas, uma baseada em analisar palavras chaves nas mensagens de commit outra em analisar a associação entre cada commit com bug report. Entretando a qualidade da extração  automática destes dados dependem de projeto.
+
+No estudo de caso utilizou-se a técnica de reconstrução de refatoração de M. Kim (MK) para identificar mudanças sistemáticas na API do sistema.
+
+Identificação de revisões de bug fixes - utilizou-se técnicas largamente utilizadas em pesquisas sobre mireção de dados em repositórios, verificando palavras como 'fix' nos commits ou tags como 'bug', isto funciona bem nos projetos selecionados pois tem qualidade no histórico de mudanças e mensagens de commits.
+
+Identificação de alterações de introdução de bugs, foi analisado através de diff e svn blame quando um certo bug foi adicionado.
+
+Change Distilling ?
+
+Inspeção manual dos dados coletados automaticamente - Como o estudo baseia-se em dados coletados de forma automática, é importante validar estes dados... 93\% de precisão MK, 96\% de identificacao de revisão bug fix.
+
+Existem mais correção de bugs após refatoração de API-level? Os nossos estudos mostraram que sim, após uma refatoração a média de correções é maior que antes a refatoração. Existem muitas possíveis explicações: refatoração podem introduzir bugs, e desevolvedores corrigem estes novos bugs. Ou refatoração ajuda aos desenvolvedore encontrar bugs já existentes antes da refatoração.
+
+Nota-se que os desenvolvedores fazem refatoracao antes de resolver bugs a fim de facilitar o trabalho, essas refatoracoes frequentemente introduzem novos bugs devido a falhas na refatoracao, isto implica que precisa-se de ferramentas de apoio neste sentido. Para reparar erros de refatoração.
+
+Refatoração de API-level reduzem o tempo de correção de bugs? De modo geral foi observado que existe uma queda no tempo de solução de bugs após uma refatoração.
+
+Refatoração de API-level facilitam a resolução de bug fixes? 
+
+Existem relativamente poucas refatorações de API-level após datas de releases? os resultados mostram que há mais refatoração depois de um release do que imediatamente antes dele. E tem mais bug-fixes antes do que depois. Nós expeculamos que desenvolvedores aplicam refatoração para implementar bug-fixes.
+
+(5. DISCUSSION)
+
+
+\bibliography{bibliografia}
+\end{document}
