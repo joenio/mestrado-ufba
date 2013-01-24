@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{How We Refactor, and How We Know It\cite{HowWeRefactor} \\
+ \large MATE08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{24 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resumo}
+
+Refatoração é o processo de alteração da estrutura de um programa sem modificar
+seu comportamento. Fowler catalogou em seu seu livro 72 tipos diferentes de
+refatoração, variando de mudanças localizadas a mudanças globais no programa,
+ele afirma que refatoração traz benefícios significativos ao processo de
+desenvolvimento, alguns estudos de caso mostram que a prática de refatoração é
+comum entre os desenvolvedores e pode por exemplo melhorar métricas de código.
+No entando estas afirmações são em sua maioria tomadas a partir de um único
+estudo de caso ou um único método de pesquisa e não podem ser generalizadas.
+Este estudo replica parte destes estudos em uma variedade de outros contextos e
+explora elementos deixados de lado pela maioria dos autores com o objetivo de
+confirmar ou invalidar as conclusões tomadas. Foi utilizado um método
+experimental com dados de 4 fontes diferentes, onde aplicou-se várias
+estratégias de detecção de refatoração, a fim de testar um grupo de 9 hipóteses
+sobre refatoração. Os dados utilizados foram os seguintes: (1) dados capurados
+pela ferramenta Mylyn Monitor em 2005 por Murphy e seus colegas sobre o uso do
+Eclipse por um grupo de 41 desenvolvedores voluntários; (2) dados publicamente
+disponíveis do Eclipse Usage Collector a respeito do perfil de mais de 13 mil
+desenvolvedores Java usuários do Eclipse; (3) histórico de refatorações feitas
+por 4 desenvolvedores mantenedores de ferramentas de refatoração no Eclipse;
+(4) histórico de alterações do código-fonte do Eclipse e jUnit vindos do
+sistema de controle de versões CVS. 9 hipóteses sobre o comportamento dos
+desenvolvedores durante refatorações foram testadas contra estes dados. De
+forma geral conclui-se que os desenvolvedores utilizam muito pouco ferramentas
+de apoio a refatoração e a maior parte das refatorações são feitas manualmente.
+Acho muito interessante pesquisas que validam estudos anteriores, especialmente
+estudos que lidam com cultura e comportamento dos desenvolvedores. Este estudo
+foi importante para mim pois confirma minha opinião pessoal sobre o tema, ainda
+existe pouca adoção de ferramentas de apoio a refatoração entre os
+desenvolvedores.
+
+\bibliography{bibliografia}
+\end{document}
