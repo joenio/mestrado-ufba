@@ -6,8 +6,8 @@
 \bibliographystyle{ieeetr}
 
 
-\title{Resenha: CodeTimeline: Storytelling with Versioning Data\cite{CodeTimeline} \\
- \large MAT08 - Evolução de Software (2012.2)}
+\title{CodeTimeline: Storytelling with Versioning Data\cite{CodeTimeline} \\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
 \author{Joenio Marques da Costa}
 \date{06 de dezembro de 2012}
 
@@ -15,16 +15,39 @@
 
 \maketitle
 
-\section{Resumo}
+\section*{Resenha}
 
-Era uma vez...
+Entender e trabalhar com sistemas de software geralmente requer conhecimento
+sobre seu histórico e sobre as decisões arquiteturais tomadas no passado, este
+conhecimento raramente é documentado e encontra-se usualmente espalhado na
+memória dos desenvolvedores. Experiências na indústria mostram que requisitar
+engenheiros de software para manter esta documentação tem falhado. Novas
+abordagens utilizando aspectos de redes sociais tem surgido e se mostrado
+bastante promissoras neste sentido, este trabalho propõe uma abordagem de
+documentação baseada nestes aspectos utilizando {\it story-telling
+visualization} com foco em grupos fechados de desenvolvedores. Surge assim o
+{\sc CodeTimeline}, um protótipo de um ambiente de visualização e interação com
+o histórico de projetos de software, nele é possível adicionar eventos em
+pontos específicos da vida do projeto em forma de emails, conversas de
+bate-papo, imagens, fotos, entre outros, sendo possível consultar a relação
+entre tais eventos e as mudanças efetuadas no código-fonte, este protótipo
+oferece 2 dimensões de visualização distintas: (a) {\it collaboration view} e
+(b) {\it sourcecloud flow view}, das quais destaca-se a (b) por ser a principal
+contribuição deste trabalho. {\it Sourcecloud flow view} é uma forma de
+visualização construída com base nas palavras extraídas do código-fonte em
+forma de uma nuvem, nesta nuvem múltiplas dimensões podem ser representadas
+através do tamanho e cor da fonte, podendo representar por exemplo a tendência
+de surgimento ou desaparecimento de uma certa palavra durante a vida do
+projeto. Este protótipo funciona como um ponto central de interação entre o
+desenvolvedor e o código-fonte do projeto, promovendo a possibilidade de
+navegar entre os eventos com informações que antes estavam apenas na memória
+dos desenvolvedores.
 
-\section{Questoes}
-
-\begin{itemize}
-  \item isso?
-  \item aquilo?
-\end{itemize}
+Estudo interessante, com uma abordagem mais experimental que de costume, a
+proposta é interessante mas me parece pouco usual por se basear em grupos
+fechados de desenvolvedores, seria muito interessante uma proposta como esta
+aplicada a projetos abertos, com grupos de desenvolvedores grandes e abertos,
+onde os dados fossem publicamente visíveis através de uma plataforma Web.
 
 \bibliography{bibliografia}
 \end{document}
