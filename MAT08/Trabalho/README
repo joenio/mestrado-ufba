@@ -18,6 +18,22 @@ Plano de estudo para leitura:
 Analyzing the Evolution of Large-Scale Software Systems using Design
 Structure Matrices and Design Rule Theory: Two Exploratory Cases
 
+No artigo "Secrets from the Monster Extracting Mozilla's Software Architecture"
+o autor cita que o Mozilla Milestone-9 ou "M9" tem 2 milhões e linhas de código.
+
+Artigo explora arquitetura interna em detalhes do VIM:
+
+John B. Tran, Michael W. Godfrey, Eric H. S. Lee, and
+Richard C. Holt, “Architecture Analysis and Repair of
+Open Source Software”, to appear in 2000 Intl. Work-
+shop on Program Comprehension (IWPC’00), Limer-
+ick, Ireland, June 2000
+
+Artigo explora detalhes da arquitetura do Mozilla:
+
+Eric H. S. Lee, “Mozilla: Its Extracted Software Architecture”, in preparation
+
+
 (documentar mais artigos sobre o tema aqui)
 
 Avaliação do Trabalho:
@@ -45,3 +61,59 @@ Roteiro para o Trabalho:
 5 - Utilize a ferramenta escolhida para extrair as informações de interesse
 6 - Analise as informações, procurando responder à questão de pesquisa estabelecida
 7 - Reporte os resultados em um relatório técnico no formato definido
+
+
+== ANALISE ESTATICA ==
+
+Ao tentar analisar o firefox 0.8, modulo embedding, o doxyparse 1.5.9-1 (amd64) deu falha de segmentação:
+
+   function toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:(NSToolbar *,NSString *,BOOL) in line 167
+      protection public
+      54 lines of code
+      3 parameters
+      8 conditional paths
+Falha de segmentação
+
+Outros módulos do firefox não apresentam este erro. A versão 1.5.8-11 e 1.5.8-10 (amd64) também apresentam
+este mesmo erro.
+
+O doxyparse 1.5.9-1 (i386) também apresenta o mesmo erro. Testando cada versão:
+
+1.5.8-1 - ok
+1.5.8-2 - ok
+1.5.8-3 - ok
+1.5.8-4 - ok
+1.5.8-5 - ok
+1.5.8-6 - ok
+1.5.8-7 - ok
+1.5.8-8 - erro
+1.5.8-9 - erro
+1.5.8-10 - erro
+1.5.8-11 - erro
+
+O erro foi introduzido na versão 1.5.8-8. O problema foi causado pela correção de um bug relatado
+no bugzilla do Doxygen (https://bugzilla.gnome.org/show_bug.cgi?id=398942), terceiro submeteu um
+patch corrigindo isto ao doxygen e também adicionou ao doxyparse, ao reverter o commit f2ce5c
+e compilar o doxyparse não apresentou mais o problema. É preciso no entando resolver o problema
+relatado no bugzilla de forma consistente, será preciso implementar um teste mostrando este erro,
+trazer o commit de volta e então resolver de forma que não dê falha de segmentação, talvez
+atualizar o doxyparse com o upstream.
+
+Por hora, compilei o doxyparse 1.5.8-11 (será 12) e instalei via pacote Debian em meu sistema
+Wheezy. Com isto será possível analisar os releases do Firefox a partir da versão 0.8, abaixo
+o status da análise de cada versão:
+
+0.8 - em andamento
+
+Resolveu um problema, mas continua dando falha em outro ponto, outro módulo widget.
+$ doxyparse widget/
+
+   function drawRect:(NSRect) in line 2508
+      protection public
+      14 lines of code
+      1 parameters
+      2 conditional paths
+Falha de segmentação
+
+Voltei a usar a ultima versao sem erros 1.5.8-7, é preciso fazer o analizo suportar outras versões
+do doxyparse, pois a sintaxe da saida eh diferente.
