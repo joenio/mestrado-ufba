@@ -1,0 +1,27 @@
+Relatório técnico estudo exploratório do Linux
+
+Avaliação do Trabalho:
+* O trabalho será realizado em duplas.
+* A princípio, o trabalho será sobre um dos desafios do MSR (Working Conference on Mining Software Repositories), embora possamos discutir trabalhos alternativos, desde que estejam no contexto da disciplina.
+* O trabalho deve ser apresentado pela dupla e reportado segundo o formato do desafio do MSR.
+
+Formato do Relatório do Trabalho:
+* O relatório deve descrever os resultados de seu trabalho e contemplar os seguintes aspectos: questões abordadas, os dados de entrada, abordagem e ferramentas utilizadas, resultados obtidos e interpretação deles, e conclusões. 
+* Certifique-se de suas contribuições, o propósito, resultados e importância ou relevância de seu trabalho estão em destaque no seu relatório. 
+* Relatórios devem ter, no máximo, quatro páginas e devem estar de acordo com o formato de conferência IEEE em duas colunas. 
+* http://2013.icse-conferences.org/content/submission-guidelines
+
+Roteiro para o Trabalho:
+1 - Sistema: Firefox (MSR 2011)
+2 - Questão: Evolução da arquitetura através de DSM
+3 - Design do experimento:
+ 3.1 - Entrada: código-fonte do sistema Firefox
+ 3.2 - Periodo: ????? a ?????
+ 3.3 - Granularidade: por release
+ 3.4 - Informações extraídas: colaboração/dependência entre entidades/módulos do sistema ao longo do tempo (releases)
+ 3.6 - Análise: como os dados serão analisados?
+ 3.5 - Ferramentas: Doxyparse, Analizo, Lattix (?), Design Suite, ... (n sei ainda)
+4 - Colete os dados
+5 - Utilize a ferramenta escolhida para extrair as informações de interesse
+6 - Analise as informações, procurando responder à questão de pesquisa estabelecida
+7 - Reporte os resultados em um relatório técnico no formato definido
