@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{Chava: Reverse Engineering and Tracking of Java Applets
+ \cite{Chava} \\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{17 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+No início a Internet era baseada em servidores Web provendo conteúdo HTML
+estático, não demorou muito para surgirem o scripts CGI
+e logo em seguida os applets Java oferecendo
+interfaces ricas e processamento no lado do cliente. Existem muitas
+ferramentas para análise estrutural de arquivos HTML e muitas outras para
+análise estrutural entre os componentes de grandes programas. Mas a maioria
+destas ferramentas não suportam applets Java, este trabalho apresenta então o
+Chava, uma ferramenta para analisar applets Java, com suporte a verificação de
+mudanças entre versões, análise de HTML conjuntamente com applets Java, além
+de outros recursos. Chava adota um modelo de dados onde cada programa é visto
+como um conjunto de entidades, que referenciam-se umas as outras. Este modelo armazena classes,
+interfaces, pacotes, arquivos, métodos, campos e textos. Cada uma destas
+entidades pode ter alguns atributos como parentesco e escopo e trazem relações
+como herança e dependência. O uso da ferramenta se dá a partir da análise de
+um programa seguido da criação de um banco de dados baseado no modelo de
+dados, a partir daí é possível fazer consultas e visualizações a respeito do
+programa, estas consultas e visualizações são realizadas através do CIAO, um
+conjunto de ferramentas para consulta e visualização de software. Com ele é
+possível agrupar entidades, visualizar diferença entre versões, exibir
+graficamente o relacionamentos entre entidades, além de calcular métricas a
+respeito da complexidade do programa. Chava é implementado em C e possui cerca
+de 3 mil linhas de código, para medir a sua performance foi feito um estudo
+comparativo entre ele, o javac e o javap utilizando como entrada os seguintes
+projetos: a biblioteca padrão do Java, a biblioteca Swing e o projeto
+WebDelta. Nos testes realizados o Chava se mostrou mais
+eficiente que o javac e o javap. Com o grande aumento de soluções Java
+torna-se importante ferramentas de apoio a atividades comuns da engenharia de
+software, com o Chava é possível trabalhar com grandes programas e executar
+analises complexas como análise de impacto e clustering.
+
+Comparar versões distintas e exibir graficamente suas diferenças é um recurso
+muito interessante mas a ferramenta como um todo me parece de pouca utilidade
+prática uma vez que novas tecnologias Web seguindo padrões abertos vem
+constantemente substituindo soluções como applets Java. Vejo recursos
+interessantes no Chava que servem mais de inspiração para outras ferramentas,
+o uso da ferramenta em sí pode ser útil na replicação ou validação do artigo
+apresentado.
+
+\bibliography{bibliografia}
+\end{document}

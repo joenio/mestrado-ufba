@@ -23,6 +23,7 @@ o autor cita que o Mozilla Milestone-9 ou "M9" tem 2 milhões e linhas de códig
 
 Artigo explora arquitetura interna em detalhes do VIM:
 
+
 John B. Tran, Michael W. Godfrey, Eric H. S. Lee, and
 Richard C. Holt, “Architecture Analysis and Repair of
 Open Source Software”, to appear in 2000 Intl. Work-
@@ -55,8 +56,8 @@ Roteiro para o Trabalho:
  3.2 - Periodo: ????? a ?????
  3.3 - Granularidade: por release
  3.4 - Informações extraídas: colaboração/dependência entre entidades/módulos do sistema ao longo do tempo (releases)
- 3.5 - Ferramentas: Doxyparse, Analizo, Lattix (?), Design Suite, ... (n sei ainda)
  3.6 - Análise: como os dados serão analisados?
+ 3.5 - Ferramentas: Doxyparse, Analizo, Lattix (?), Design Suite, ... (n sei ainda)
 4 - Colete os dados
 5 - Utilize a ferramenta escolhida para extrair as informações de interesse
 6 - Analise as informações, procurando responder à questão de pesquisa estabelecida
@@ -64,6 +65,80 @@ Roteiro para o Trabalho:
 
 
 == ANALISE ESTATICA ==
+
+A 1º versao analisada no artigo é de Março de 1998, é uma das versões disponibilizadas na URL abaixo:
+
+http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980331-unix.tar.gz
+(08-Apr-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980408.tar.gz (esta foi a 1º analisada)
+(29-Apr-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980429.tar.gz
+(03-Jun-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980603.tar.gz
+(29-Jul-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980728.tar.gz
+(04-Sep-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19980904.tar.gz
+(08-Oct-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19981008.tar.gz
+(21-Dec-1998) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19981211.tar.gz (esta foi a 2º analisada)
+(28-Jan-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/mozilla-19990128.tar.gz
+
+(22-Mar-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m3/TGZ/mozilla-5.0-SeaMonkey_M3_BRANCH_19990319.tar.gz
+(16-Apr-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m4/TGZ/mozilla-5.0-M4.tar.gz
+(11-May-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m5/TGZ/mozilla-5.0-M5.tar.gz
+(28-May-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m6/TGZ/mozilla-5.0-M6.tar.gz
+(23-Jun-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m7/src/mozilla-source-M7.tar.gz
+(15-Jul-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m8/src/mozilla-source-M8.tar.gz
+(26-Aug-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m9/src/mozilla-source-M9.tar.gz
+(09-Oct-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m10/src/mozilla-source-M10.tar.gz
+(16-Nov-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m11/src/mozilla-source-M11.tar.gz
+(21-Dec-1999) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m12/src/mozilla-source-M12.tar.gz (analisar)
+(27-Jan-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m13/src/mozilla-source-M13.tar.gz
+(03-Mar-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m14/src/mozilla-source-M14-no-crypto.tar.gz
+(21-Apr-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m15/src/mozilla-source-M15.tar.gz
+(15-Jun-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m16/src/mozilla-source-M16.tar.gz
+(09-Aug-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m17/src/mozilla-source-M17.tar.gz
+(12-Oct-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/m18/src/mozilla-source-M18.tar.gz
+
+(13-Dec-2000) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla0.6/src/mozilla-source-0.6.tar.gz (analisar)
+(10-Jan-2001) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla0.7/src/mozilla-source-0.7.tar.gz
+(19-Feb-2001) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla0.8/src/mozilla-source-0.8.tar.gz
+(08-May-2001) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla0.9/src/mozilla-source-0.9.tar.gz
+(31-May-2002) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.0/src/mozilla-source-1.0.tar.gz (analisar)
+(27-Aug-2002) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.1/src/mozilla-source-1.1.tar.gz
+(30-Nov-2002) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.2/src/mozilla-source-1.2.tar.gz
+(13-Mar-2003) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.3/src/mozilla-source-1.3.tar.gz
+(30-Jun-2003) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.4/src/mozilla-source-1.4.tar.gz
+(15-Oct-2003) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.5/src/mozilla-source-1.5.tar.gz
+(16-Jan-2004) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.6/src/mozilla-source-1.6.tar.gz
+(17-Jun-2004) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.7/src/mozilla-source-1.7.tar.gz
+(23-Feb-2005) http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.8b1/source/mozilla-source-1.8b1.tar.gz
+
+Aparentemente a partir daqui já são versões do Mozilla já com nome de Firefox:
+
+(09-Feb-2004) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.8/firefox-source-0.8.tar.bz2
+(15-Jun-2004) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.9/firefox-0.9-source.tar.bz2
+(14-Sep-2004) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10/firefox-1.0PR-source.tar.bz2
+(08-Nov-2004) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0/source/firefox-1.0-source.tar.bz2
+(29-Nov-2005) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.5/source/firefox-1.5-source.tar.bz2
+(23-Oct-2006) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/2.0/source/firefox-2.0-source.tar.bz2
+(17-Jun-2008) http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/3.0/source/firefox-3.0-source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/3.5/source/firefox-3.5-source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/3.6/source/firefox-3.6.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/4.0/source/firefox-4.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/5.0/source/firefox-5.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/6.0/source/firefox-6.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/7.0/source/firefox-7.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/8.0/source/firefox-8.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/9.0/source/firefox-9.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/10.0/source/firefox-10.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/11.0/source/firefox-11.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/12.0/source/firefox-12.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/13.0/source/firefox-13.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/14.0.1/source/firefox-14.0.1.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/15.0/source/firefox-15.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/16.0/source/firefox-16.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/17.0/source/firefox-17.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/18.0/source/firefox-18.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/19.0/source/firefox-19.0.source.tar.bz2
+() http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/20.0/source/firefox-20.0.source.tar.bz2
+
+
 
 Ao tentar analisar o firefox 0.8, modulo embedding, o doxyparse 1.5.9-1 (amd64) deu falha de segmentação:
 
@@ -117,3 +192,41 @@ Falha de segmentação
 
 Voltei a usar a ultima versao sem erros 1.5.8-7, é preciso fazer o analizo suportar outras versões
 do doxyparse, pois a sintaxe da saida eh diferente.
+
+Para produzir arquivos DOT para serem renderizados como DMS executar o seguinte:
+
+$ analizo graph --modules t/samples/animals/java
+
+digraph callgraph {
+"Cat" -> "Mammal" [style=solid,label=1];
+"Dog" -> "Mammal" [style=solid,label=1];
+"Main" -> "Animal" [style=solid,label=1];
+"Mammal" -> "Animal" [style=solid,label=1];
+}
+
+O Grapviz suporta layouts diferentes:
+layout=engine indicates the preferred layout engine ("dot", "neato", fdp" etc) overriding the default from
+the basename of the command or the −K commandline option.
+
+É possível implementar um layout que gere saída como uma Matrix DSM.
+http://www.graphviz.org/content/how-implement-new-layout-style-graphviz
+
+Dar uma olhada na ferramenta de visualizacao de grafo Gephi
+
+A versao doxyparse 1.5.8-7 funciona sem erros com os fontes do firefox 0.8, eh preciso
+investigar quais mudanças houveram a partir desta versao que faz dar erro de segmentação.
+
+Por hora irei utiilzar esta versao do doxyparse, e fazer downgrade do analizo tb para uma versao
+que funcione com esta versao do doxyparse, eu preciso apenas da saída em formato DOT agrupados
+por modulos para entao gerar uma matrix a partir dos relacionamentos.
+
+O analizo apartir do commit ab2b19 requer doxyparse maior ou igual que 1.5.8-12.
+
+Porra do doxyparse 1.5.8-7 tb dá falha de segmentação com o firefox-0.8, merda!!!
+
+
+Livro
+http://books.google.com.br/books?id=MPQoumoGXHYC&pg=PA144&lpg=PA144&dq=reachability+matrices+warfield+1973&source=bl&ots=tsBq9c1anZ&sig=KlYZiJ5Dhbvbncs0IBaj3gPFYKw&hl=pt-BR&sa=X&ei=-Z9tUev7F4nY9AT7jIDoBw&ved=0CD4Q6AEwAg#v=onepage&q=reachability%20matrices%20warfield%201973&f=false
+
+Livro (foi neste que encontrei a solução transitive closure matrix)
+http://books.google.com.br/books?id=7XUSn0IKQEgC&pg=PA495&redir_esc=y#v=onepage&q&f=false
