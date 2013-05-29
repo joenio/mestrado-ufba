@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\bibliographystyle{ieeetr}
+
+\title{Título da proposta de trabalho aqui\\
+ \large MATE26 - Tópicos Especiais em Engenharia de Software II (2013.1)}
+\author{
+  Joenio Marques da Costa\\
+  \texttt{joenio@colivre.coop.br}
+  \and
+  Daniela Soares Feitosa\\
+  \texttt{daniela@colivre.coop.br}
+}
+\date{07 de junho de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+Criar ferramenta Web para visualização de {\it Design Structure Matrix}
+utilizando novas tecnologias HTML5, CSS3 e JavaScript. Esta ferramenta deverá
+ter suporte a interação com usuário para visualizar módulos do sistema através
+de algoritmos de clusterização de DSM, esta ferramenta deve sugerir mais de
+uma opção de cluster e permitir que o usuário visualize cada uma. Por padrão a
+DSM deverá ser organizada em módulos que reflitam a organização de arquivos do
+sistema, ou seja, fazer cluster por pastas do código-fonte do software sendo
+visualizado. Este cluster por pastas é a modularização inerente do software,
+proposta pelos seus desenvolvedores. Esta ferramenta irá utilizar como backend
+o projeto Analizo, o qual tem suporte a analisar código-fonte C, C++ e Java, e
+possui suporte a cálculo de métricas de software, bem como algumas
+visualização como a própria DSM. Como frontend será utilizado o framework Web
+nodejs que irá se comunicar com o backend para obter os dados que serão
+exibidos ao usuário.
+
+Referências:
+\cite{AKnowledgeBased,AModelBasedMethod,AnalyzingTheEvolution,AntaresDSM,ApplyingTheDesign,DependencyModel,DesignSuite,EfficientOrganizing,ExploringStructure,PredictingChange,PredictingRequirementChange,ReachabilityMatrices,TheStructureAndValue,UsingTheDesignStructure}.
+
+\bibliography{bibliografia}
+\end{document}
