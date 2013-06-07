@@ -1,10 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
+\usepackage{graphicx}
 \usepackage{fancyvrb}
 \bibliographystyle{ieeetr}
 
-\title{Título da proposta de trabalho aqui\\
+\title{Ferramenta Web para Visualização de DSM\\
  \large MATE26 - Tópicos Especiais em Engenharia de Software II (2013.1)}
 \author{
   Joenio Marques da Costa\\
@@ -19,25 +20,76 @@
 
 \maketitle
 
-\section*{Resenha}
+Este trabalho visa o desenvolvimento de uma interface Web para visualização de
+{\it Design Structure Matrices (DSM)} com base na ferramenta {\it
+Analizo}\footnote{http://analizo.org}, um conjunto de ferramentas para análise
+e visualização de código fonte extensível e independente de linguagem.
 
-Criar ferramenta Web para visualização de {\it Design Structure Matrix}
-utilizando novas tecnologias HTML5, CSS3 e JavaScript. Esta ferramenta deverá
-ter suporte a interação com usuário para visualizar módulos do sistema através
-de algoritmos de clusterização de DSM, esta ferramenta deve sugerir mais de
-uma opção de cluster e permitir que o usuário visualize cada uma. Por padrão a
-DSM deverá ser organizada em módulos que reflitam a organização de arquivos do
-sistema, ou seja, fazer cluster por pastas do código-fonte do software sendo
-visualizado. Este cluster por pastas é a modularização inerente do software,
-proposta pelos seus desenvolvedores. Esta ferramenta irá utilizar como backend
-o projeto Analizo, o qual tem suporte a analisar código-fonte C, C++ e Java, e
-possui suporte a cálculo de métricas de software, bem como algumas
-visualização como a própria DSM. Como frontend será utilizado o framework Web
-nodejs que irá se comunicar com o backend para obter os dados que serão
-exibidos ao usuário.
+{\it DSM} é uma ferramenta que destaca a estrutura inerende de um design de um
+produto ou projeto examinando as dependencias existentes entre seus
+componentes através de uma matrix simétrica\cite{ExploringStructure}. Ela foi
+inicialmente  (Steward, 1981) proposta no contexto de gestão de projetos com
+objetivo de melhorar o fluxo de informações entre tarefas e atividades, e tem
+sido utilizada constantemente com este objetivo como visto em
+\cite{AModelBasedMethod}
 
-Referências:
-\cite{AKnowledgeBased,AModelBasedMethod,AnalyzingTheEvolution,AntaresDSM,ApplyingTheDesign,DependencyModel,DesignSuite,EfficientOrganizing,ExploringStructure,PredictingChange,PredictingRequirementChange,ReachabilityMatrices,TheStructureAndValue,UsingTheDesignStructure}.
+Desde então tem sido utilizado nos mais variados contextos
+\cite{PredictingChange, PredictingRequirementChange, UsingTheDesignStructure}
+incluindo as áreas de engenharia de software, compreensão, visualização,
+análise de impacto, dentre outras.  Uma grande vantagem da visualização de
+software através de DSM é que ela consegue exibir uma grande quantidade de
+informação em uma forma compacta, assim é possível demonstrar arquitetura de
+softwares complexos com muitos elementos interelacionados de forma
+compacta\cite{DependencyModel}.
+
+DSMs podem ser utilizada para identificar possíveis formas de reorganizar os
+elementos de um sistema a fim de reduzir custos de coordenação, facilitando o
+fluxo de informações entre os elementos. Elementos com um alto nível de
+dependencia são agrupados em cluster ou módulos.
+
+Para guiar este processo uma gama de algoritmos de clusterizing tem sido
+desenvolvidos, com objetivo de minimizar custo de coordenação, este trabalho
+tem como objetivo implementar ao menos um desdes algoritmos na ferramenta {\it
+Analizo}.
+
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.5]{linux.png}
+\caption{Design Structure Matrix do Linux 2.0 gerado pelo Analizo}
+\label{fig:dsm}
+\end{figure}
+
+O {\it Analizo} já possui suporte a construção de DSM de projetos de software
+escritos em C, C++ ou Java, como pode ser visto na Figura~\ref{fig:dsm}.
+
+Contudo a visualização de DSM provida pelo {\it Analizo} é estática e não
+oferece nenhuma interação com o usuário, este trabalho visa evoluir esta
+funcionalidade provendo:
+
+\begin{itemize}
+  \item Interface Web para visualização de DSM
+  \item Implementação de algoritmos de clusterização de DSM
+  \item Interação com zoom e reorganização da DSM em clusters
+\end{itemize}
+
+Deverá ser possível através da interface Web selecionar uma entre várias
+sugestões de organização da DSM em cluster calculada automaticamente pela
+ferramenta. A organização padrão será cluster com base na organização de
+diretórios dada ao projeto pelos seus desenvolvedores.
+
+Esta ferramente irá prover ainda a infraestrutura para que usuários cadastrem
+endereços de repositórios de código-fonte que serão então automaticamente
+copiados para serem então analizados e disponibilizados para visualização e
+interação com a DSM.
+
+Outras referências sobre DSMs:
+\cite{AKnowledgeBased, AnalyzingTheEvolution, AntaresDSM, ApplyingTheDesign,
+DesignSuite, EfficientOrganizing, ReachabilityMatrices, TheStructureAndValue}.
+
+% TODO pesquisar tais artigos:
+% Compreensão e Visualização de Projetos Orientados a Objetos com Matriz de Dependências
+% A design structure matrix (dsm) aplicada ao projeto de navios
+% Procurar artigo de Steward, 81
 
 \bibliography{bibliografia}
 \end{document}
