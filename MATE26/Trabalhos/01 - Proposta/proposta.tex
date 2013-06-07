@@ -4,7 +4,8 @@
 \usepackage{fancyvrb}
 \bibliographystyle{ieeetr}
 
-\title{Título da proposta de trabalho aqui\\
+\title{Visualização de Design Structure Matrix com NodeJS no software
+Analizo\\
  \large MATE26 - Tópicos Especiais em Engenharia de Software II (2013.1)}
 \author{
   Joenio Marques da Costa\\
@@ -19,21 +20,38 @@
 
 \maketitle
 
-\section*{Resenha}
+\section*{Proposta do trabalho}
 
-Criar ferramenta Web para visualização de {\it Design Structure Matrix}
-utilizando novas tecnologias HTML5, CSS3 e JavaScript. Esta ferramenta deverá
-ter suporte a interação com usuário para visualizar módulos do sistema através
-de algoritmos de clusterização de DSM, esta ferramenta deve sugerir mais de
-uma opção de cluster e permitir que o usuário visualize cada uma. Por padrão a
-DSM deverá ser organizada em módulos que reflitam a organização de arquivos do
-sistema, ou seja, fazer cluster por pastas do código-fonte do software sendo
+O objetivo do trabalho será criar uma ferramenta Web para visualização
+de {\it Design Structure Matrix (DSM)} utilizando novas tecnologias HTML5,
+CSS3  e JavaScript. Esta ferramenta deverá ter suporte a interação com
+usuário para visualização dos módulos do sistema através de algoritmos
+de clusterização de DSM. Além disso, deve sugerir mais de uma opção de
+cluster e permitir que o usuário visualize cada uma das opções.
+
+Por padrão, a DSM deverá ser organizada em módulos que reflitam a organização de
+arquivos do sistema, ou seja, fazer cluster por pastas do código-fonte do software
 visualizado. Este cluster por pastas é a modularização inerente do software,
-proposta pelos seus desenvolvedores. Esta ferramenta irá utilizar como backend
-o projeto Analizo, o qual tem suporte a analisar código-fonte C, C++ e Java, e
-possui suporte a cálculo de métricas de software, bem como algumas
-visualização como a própria DSM. Como frontend será utilizado o framework Web
-nodejs que irá se comunicar com o backend para obter os dados que serão
+proposta pelos seus desenvolvedores.
+
+Esta ferramenta irá utilizar como backend o projeto Analizo, uma suíte
+de ferramentas de análise e visualização de código fonte que suporta C,
+C++ e Java. Esse projeto possui suporte ao cálculo de mais de 20
+métricas de software, além de poder analisar e armazenar tanto métricas
+quanto informações estruturais do código-fonte de cada revisão
+armazenada em um repositório de controle de versão.
+
+O software Analizo já possui suporte a algumas visualizações, como a
+própria DSM, mas nesse trabalho pretendemos implantar uma nova
+visualização que permita a interação com o usuário, evoluindo assim o
+software.
+
+A interface para interação com o usuário será desenvolvida utilizando o
+framework Web NodeJS, uma plataforma para desenvolvimento em Javascript
+no lado do servidor que permite respostas rápidas às interações. Após o
+usuário inserir o endereço de um repositório de controle de versão
+público, o frontend irá se comunicar com o backend, que irá analisar o
+código fonte para extração de métricas e obter os dados que serão
 exibidos ao usuário.
 
 Referências:
