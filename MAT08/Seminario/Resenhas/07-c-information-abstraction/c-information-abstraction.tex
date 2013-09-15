@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{The C Information Abstraction System
+ \cite{TheCInformation}\\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{17 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+Analisar a estrutura de grandes programas é uma das mais frustantes e demoradas
+partes da manutenção de um programa. Este artigo descreve um programa de abstração
+de sistema para apoio durante a manutenção de programas.
+
+A construção de um programa de abstração de sistemas envolve 3 etapas:
+
+1. Formar um modelo conceitual, define os objetos de um software em certa linguagem
+e seus relacionamento em certo nível de abstração. O modelo deve ser completo, todos
+os objetos e tipos de relacionamentos em um certo nível de abstração estão presentes no
+modelo.
+
+2. Extrair visualizações relacionais, um parser é construído para analisar o programa
+e extrais informações deacordo com o modelo conceitual.
+
+3. Construir visualizações abstratas, uma visualização abstrata mostra um aspecto
+da estrutura do programa e esconde detalhes desnecessários.
+
+Com base nestar premissas foi constrído a ferramente CIA, uma ferramenta de análise
+de programas em C. O artigo mostra como a ferramenta pode ser utilizada para estudar
+alguns aspectos da estrutura de programas C, como: subsystem, camadas, dead code,
+acoplamento.\cite{ExtracaoDeDependencias}
+
+Muitos programas de abstração de sistema sem sido proposto e relatado na literatura,
+breve descrição de cada uma, as mais relevantes, e as lições aprendidas com cada uma:
+
+MasterScope (Interlisp), FAST (Fortran), OMEGA (Pascal-like), Cscope (C).
+
+Lições: o processo de extração de informação deve ser separada da fase de apresentação,
+um modelo conceitual conciso, um modelo conceitual define quais informações entram
+no banco de dados. Separar o banco de dados do código fonte, algumas ferramentas
+armazenam texto fonte no banco de dados, isto pode ser um problema para grandes projetos,
+o modelo adotado é armazenar no banco de dados apenas uma referencia para o código fonte.
+Construção incremental de banco de dados, dividir bancos de dados por arquivos ou
+conjunto de arquivos, e prover uma forma de jutar os varios bancos de dados, isto
+otimiza a reconstrução do banco de dados quando uma parte do sistema é alterado.
+
+
+\bibliography{bibliografia}
+\end{document}

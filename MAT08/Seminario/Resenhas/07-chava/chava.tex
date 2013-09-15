@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{Chava: Reverse Engineering and Tracking of Java Applets
+ \cite{Chava} \\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{17 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+A internet começou com servidores provendo apenas arquivos estáticos, depois
+com CGI, recentemente Applets Java tem sido crescentemente utilizado para
+prover interfaces de usuário ricas e possibilitar processamento no lado
+cliente. Enquanto muitas ferramentas de análise de websites estão disponíveis
+a maioria despreza código applet. Este trabalho apresenta a ferramenta
+Chava, um sistema de engenharia reversa e rastreabilidade para Java.
+
+A ferramenta Java lida tanto com bytecode Java quanto com código-fonte.
+
+Chava também tem a capacidade de comparar 2 versões distintas de um projeto.
+
+Ele combina a análise feita do HTML pelo WebCiao.
+
+O modelo de dados é baseado no modelo entidade-relacionamento de Chen
+Cada programa Java é visto como um conjunto de entidades, que referenciam
+um ao outro. Uma propriedado do modelo adotado neste estudo é a completude
+(completeness), para um modelo ser completo se a compilação de uma entidade
+A depende da entidade B, um relacionamento entre elas deve estar no modelo.
+A completude não é possível em entidades que implementam reflexão
+(metaprogramação) na ferramenta desenvolvida.\cite{DesignSuite}
+
+O modelo proposto armazena as seguintes entidades:
+class, interface, package, file, method, field, string.
+
+Toda entidade armazenada no modelo contém os seguintes atributos:
+id, name, kind, file, begin line, end line, e chksum.
+
+Além destes existem atributos que são específicos para uma ou outra
+entidade.
+
+Entre as entidades é possível ter os seguintes relacionamentos:
+subclass, containment, implements, field read, field write, reference.
+
+Usando a ferramenta CIAO é possível visualizar os dados contidos
+no modelo de dados gerados pela nossa ferramenta.
+
+Análise de acessibilidade, acessibilidade para a frente e acessibilidade inversa.
+Proprociona informação sobre quais entidades serão afetadas por uma certa
+mudança.
+
+A ferramenta suporta armazenar informações de várias versões diferentes
+de um mesmo projeto, possibilitando verificar entidades incluidas, removidas,
+ou entidades que permanecem entre versões/releases.
+
+Chava pode também calcular uma série de métricas a fim de determinar
+quão complexo um software é.
+
+...
+
+\bibliography{bibliografia}
+\end{document}

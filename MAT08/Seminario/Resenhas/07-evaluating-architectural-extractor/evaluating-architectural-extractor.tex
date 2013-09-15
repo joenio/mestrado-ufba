@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fancyvrb}
+\usepackage[margin=0.7in]{geometry}
+\bibliographystyle{ieeetr}
+
+\title{Evaluating Architectural Extractors
+ \cite{EvaluatingArchitectural} \\
+ \large MAT08 - Tópicos em Engenharia de Software 1 (2012.2)}
+\author{Joenio Marques da Costa}
+\date{17 de janeiro de 2013}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resenha}
+
+Um dos objetivos da engenharia reversa de software é extrair design arquitetural
+do código fonte.
+
+Ferramentas analisadas:
+
+Rigi - extrai, organiza, abstrai e visualiza grandes volumes de informação.
+
+Dali - Interpreta dados de recuperação arquitetural.
+
+PBS - 
+
+CIA - Banco de dados relacional.
+
+SNiFF+ - Não é originalmente uma ferramente de engenharia reversa mas o seu parser
+é comumento utilizado.
+
+O processo de engenharia reversa é dividida em 2 fases: a identificação dos artefatos
+de código em baixo nível (extração) e a análise destes artefatos para compor componentes
+de algo nível.
+
+Este artigo divide a fase de análise em 2 partes: classificação e visualização. E faz
+um estudo das ferramentas para esta função.
+
+Na fase de extração muitas ferramentas apresentaram dificuldades. Quando processando
+código C, complexidade da linguagem causam na maioria dos extratores omissão de
+informação. Estas dificuldades foram vistas com ponteiros de função, variáveis globais,
+e chamada de bibliotecas entre outras.
+
+Estudos mostraram que 2 extratores raramente trazem resultados identicos.
+
+Falso negativo é um relacionamento ou componente que deveriam ser reportados mas não
+foi. Falso positivo é um relacionamento ou componente relatado que não existe.
+
+Para testar a capacidade e validade das informações dos extratores estudados foi
+desenvolvido um programa exemplo chamado degen foi desenvolvido, contendo
+todas as dificuldades de implementacao não bem tratadas por cada extrator estudado.
+
+Uma lista dos problemas encontrados pelos extratores foi documentada e serve
+como uma boa base para implementação de um novo extrator, pelo menos em linguagem C.
+
+Entre os extratores analisados o SNiFF+ foi o que mais apresentou bons resultados,
+infelizmente ele é um projeto comercial.
+
+\bibliography{bibliografia}
+\end{document}

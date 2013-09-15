@@ -2,3 +2,11 @@
 *.bbl
 *.blg
 *.log
+*~
+Daniela/
+MAT08/Trabalho/Codigo-Fonte*
+MAT08/Trabalho/Datasets/
+MAT08/Trabalho/Exemplos*
+MAT08/Trabalho/Link*
+MAT08/Trabalho/MSR*
+MAT08/material/

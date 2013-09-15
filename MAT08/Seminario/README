@@ -1,0 +1,79 @@
+Tema: 07. Extração de design (análise estática)
+Data da apresentação: 17/01/13
+
+Avaliação dos Seminários
+* Disponibilizar a apresentação no site da disciplina
+  antes do início do seminário.
+* Será avaliada a qualidade da apresentação, a demonstração
+  de uma ferramenta, a cobertura abrangente do tópico e a
+  qualidade dos slides.
+* Planejar uma hora para a apresentação (com interrupções
+  para perguntas) e meia hora para a demo.
+
+Leituras obrigatórias para elaboração do seminário:
+* Artigos em "MAT08/material/papers/07_ExtracaoDesignAnaliseEstatica"
+  1 An Empirical Study of Static Call Graph Extractors
+  2 Chava: Reverse Engineering and Tracking of Java Applets
+  3 The C Information Abstraction System
+  4 Bauhaus – a Tool Suite for Program Analysis and Reverse Engineering
+  5 Evaluating Architectural Extractors
+
+Slides:
+* http://joenio.me/impress.js/extracao-de-design.html
+
+ROTEIRO:
+* Definição sobre "Arquitetura de software"
+ * Arquitetura existe, está no código-fonte
+* Motivação
+ * Cerca de 60% a 80% do esforço de programação
+   destina-se a manutenção e evolução, e quase metade
+   do tempo de manutenção destina-se a entender
+   o código antes de fazer a alteração
+* Engenharia reversa
+ * Campo que utiliza de variadas técnicas para fazer inferências sobre
+   um produto, projeto, objeto, etc
+ * Técnicas largamente utilizadas para instanciar a arquitetura de um software
+* Análise estática (fase 1)
+ * Extratores
+  * parsers, compiladores, etc
+ * Modelo de dados
+  * IML (linguagem intermediaria é diferente de código de máquina)
+  * Diversas ferramentas usam diversas formas de armazenar os artefatos
+ * Formato e modo de entrada de dados brutos
+  * código-fonte, arquivos, diretórios, pacotes, código objeto, binários, etc...
+ * Linguagens, complexidades
+  * Causa limitações das ferramentas de recuperação arquitetural
+ * Baixo nível
+* Análise dinâmica
+ * Dados de uso, rastros, logs, dumps, etc
+ * Traz informações diferentes da análise estática
+ * Podem possibilitar por exemplo análise de protocolo
+ * (ou seja, como os objetos se comunicam ao longo da execução)
+* Recuperação arquitetural (fase 2)
+ * Linguagem de representação
+  * Proposta: GXL
+ * Representações visuais
+  * Grafos de chamadas, hierarquias, matrizes, etc
+ * Métricas
+  * Linhas de código, acoplamento, coesão, etc
+ * Ferramentas de navegação/iteração
+ * Alto nível
+* Ferramentas
+ * CIA
+ * Rigi
+ * SNiFF+
+ * PBS
+ * Dali
+ * Bauhaus
+ * Design Suite
+ * LDX
+ * CTAGX
+ * cflow
+ * Field
+ * mkfunctmap
+ * Chava
+ * MasterScope
+ * FAST
+ * OMEGA
+ * Cscope
+* Demo: Doxyparse e Analizo
