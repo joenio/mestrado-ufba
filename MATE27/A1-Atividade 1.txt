@@ -1,0 +1,41 @@
+﻿24/10/2013 
+
+Atividade 1
+
+Objetivo: 
+Discutir conceitos, papéis e descrição de arquitetura (preliminar)
+
+Parte I 
+
+(1) Pesquisar e discutir 
+
+Fontes preliminares para consulta:
+
+Definições gerais:
+
+http://www.sei.cmu.edu/architecture/
+http://www.sei.cmu.edu/architecture/start/glossary/community.cfm
+
+Definição padrão e modelo conceitual:
+
+http://www.iso-architecture.org/ieee-1471/
+http://www.iso-architecture.org/ieee-1471/cm/
+
+(2) Gerar síntese em português do que foi lido e discutido.
+
+Parte II 
+
+(3) Apresentar e discutir; contrapor definições gerais com definições do 
+modelo conceitual.
+(Oralmente)
+
+(4) Enviar resumo da equipe -- item (2) -- até 15/11.
+
+Obs.:
+* Colocar arquivos na pasta “Estudantes-Upload” 
+* Formato do Nome dos arquivos:
+A1-descricao-nome1<.extensão>
+
+A2 - atividade 2
+descricao - “relato”
+nome1 - colocar ao menos o nome de uma pessoa da equipe

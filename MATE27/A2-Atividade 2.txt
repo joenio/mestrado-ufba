@@ -1,0 +1,36 @@
+07/11/2013
+Atividade 2 
+
+1 - Ler padrão iso/iec/ieee 42010;
+2 - Escolher um framework arquitetural F; informar o framework escolhido até 8/11 (hoje);
+3 - Caracterizar F -- descrição geral e em termos do 42010; relatar por escrito
+4 - Preparar apresentação sobre 3
+5 - Disponibilizar arquivos com apresentação (4) e relatório (3) até o final do dia 15/11 (sexta-feira).
+
+FORMATO
+
+* Relatório:
+Ver o modelo do relatório R2-05tn017-DocumentingAndIEEE.pdf
+na pasta Artigos/Documentation e usar como modelo,
+sem a seção 3 (descrição do padrão).
+
+NÃO COLOCAR definições que são estudadas na disciplina
+(o que é arquitetura, para que serve, etc.)
+Foco no framework e na comparação.
+
+* Apresentação:
+- Apresentar o framework escolhido
+- Apresentar a comparação com 42010
+
+NÃO COLOCAR definições que são estudadas na disciplina
+(o que é arquitetura, para que serve, etc.)
+Foco no framework e na comparação.
+
+Obs.:
+* Colocar arquivos na pasta "Estudantes-Upload"
+* Formato do Nome dos arquivos:
+A2-descricao-nome1<.extensão>
+
+A2 - atividade 2
+descricao - “slides”, “relato”, etc.
+nome1 - colocar ao menos o nome de uma pessoa da equipe

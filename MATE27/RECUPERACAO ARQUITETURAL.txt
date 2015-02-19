@@ -1,0 +1,111 @@
+Meu tema é tecnicas.
+
+Notas sobre o seguinte artigo:
+
+Towards A Process-Oriented
+Software Architecture Reconstruction Taxonomy
+
+1) Arquitetura de software é um modelo de representação de alto nível
+   de abstração. [50]: Software Architecture as a Shared Mental Model
+
+2) Arquitetura de software desempenha um papel importante em pelo menos
+   6 aspectos do desenvolvimento de software: compreensão, reuso,
+   construção, evolução, análise e gerenciamento.
+
+3) A arquitetura conceitual frequentemente se torna obsoleta em relação
+   a arquitetura implementada, visto que o software evolui rapidamente
+   e sua documentação arquitetural não, isto resulta em erosão arquitetural,
+   drift [98], mismatch [35] ou chasm [106]
+
+4) Existem muitas técnicas propostas na literatura para lidar com recuperação
+   arquitetural de software [85] [95]
+
+Notas especificas sobre meu tema, tecnicas:
+
+5) Existe uma série de formatos para representar, consultar e comunicar
+   dados representando aplicações [36, 107]
+
+--------------------
+[36] Acme: Architectural Description of Component-Based Systems
+Acme é uma ADL (Linguagem de Descrição Arquitetural) genérica
+
+(ver imagem)
+--------------------
+
+RSF [141] - Rigi Standard Format, grafo
+
+--------------------
+TA [8, 31, 49, 113] - Algebra Relacional Tarski, ferramenta Grok
+
+É comum descrever arquitetura de software com caixas e setas.
+Grafos são complexos de visualizar em sua totalidade, então
+é preciso formas de transformas esses diagramas em algo mais
+compreensível.
+--------------------
+
+----------------------------------
+XML in GXL [48]: Gxl: A graph-based standard exchange format for reengineering
+
+GXL é um formato de representação de grafos com foco em interoperabilidade.
+
+(ver imagem)
+-------------------------
+
+CDIF in FAMIX [17].
+
+6) O formato pode limitar a junção ou manipulação de informação [22]
+
+7) Uma propriedade importante de formatos de comunicação é
+   ser simples de usar e gerar [19]
+
+8) Técnicas são classificadas em 3 níveis de automação:
+   quasi-manual - identifica elementos manualmente e utiliza ferramentas para compreensão
+   semi-automatic - o engenheiro configura a ferramenta que irá extrair elementos e abstrações automaticamente
+   quasi-automatic - a ferramenta extrai e cria abstrações e o engenheiro refina os resultados interativamente
+
+9) Ferramentas de visualização são utilizadas para compreensão dos dados,
+   mas a análise de tais ferramentas foge ao escopo aqui
+
+10) Algumas ferramentas
+
+Alborz - plugin Eclipse
+http://faculty.uoit.ca/sartipi/Alborz/static/index.htm
+
+Bauhaus
+http://www.bauhaus-stuttgart.de/bauhaus/index-english.html
+http://en.wikipedia.org/wiki/Bauhaus_Project_(computing)
+
+11) Recuperação arquitetural esbarra em problemas de escalabilidade
+    ao tratar conhecimento. Em resposta, pesquisadores tem sugerido
+    técnicas assistidas, construction-based e exploration-based.
+    Ambos parte de técnicas quasi-manual.
+
+    construction-based - reconstroi a arquitetura manualmente abstraindo informações de baixo nível, GraphViz, Rigi, etc
+    exploration-based - provê uma visão arquitetural através de artefatos de alto nível, é próxima a visão de desenvolvedor
+
+12) A técnica semi-automatic se distinguem em 2 categorias
+
+    abstraction-based - mapeia conceitos de baixo nível com conceitos de alto nível, existem 5 abordagens
+
+      * graph queries - linguagem declarativa, GReQL [24], ferramenta Rigi
+      * relational queries - algebra relacional, SQL [56, 57, 58]
+      * logic queries - queries lógicas são poderosas pois permite pesquisa multi-value densas, Prolog [63, 144, 39]
+      * programs - algumas abordagens usam programas orientados a objetos simples [20]
+      * lexical and structural queries - algumas abordagens são baseadas diretamente em informações lexicas e estrutural do código fonte [100, 101], estática e dinamica
+
+    investigation-based - mapeia conceitos de alto nível com conceitos de baixo nível, abordagens:
+
+      * recognizers - reconhecimento de estilos arquiteturais, reporta elementos de código fonte que combinam com as estruturas reconhecidas [56, 57]
+      * graph pattern matching - padrões são transformados em grafos que são comparados com grafo representando código-fonte [40, 110]
+      * state engine - checa conformidade arquitetural, rastros da execução em run-time e gera saída quando a execução satisfaz descrição da máquina de estados [146]
+      * maps - baseado em modelo de reflexão usam regras para mapear entidades de alto nível hipotéticas com entidades de código fonte [92, 93]
+
+13) Técnicas de recuperação arquitetural puramente automatizadas não existem
+
+14) Técnicas quasi-automatic requerem que os engenheiro direcionem ou refinem os resultados,
+    geralmente combinam: conceitos, domínio e agrupamento
+
+    conceito - análise formal de conceito identifica padrões de design [3], features [25, 38] ou módulos [111]
+    algoritmos de agrupamento - identifica grupos de objetos a partir de algum atributo comum [2], [1, 79, 80, 90]
+    domínio - em um grafo direcionado, um nó D domina um nó N se todos os caminhos da rais para o nó N passam por D [10, 14, 37]
+

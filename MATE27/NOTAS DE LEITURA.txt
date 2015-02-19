@@ -1,0 +1,16 @@
+NOTAS DE LEITURA
+
+Linux as a Case Study: Its Extracted Software Architecture
+Ivan T. Bowman and Richard C. Holt
+
+p.556:
+Existem 2 tipos de documentação arquitetural que são particularmente
+interessantes para quem tenta entender um sistema de software:
+* arquitetura conceitual (alto nível)
+* arquitetura concreta (o que é implementado de fato)
+
+p.558:
+Ferramentas utilizadas para recuperar a arquitetura concreta:
+* cfx - extrai entidades e relacoes do código
+* grok - interpreta e agrupa os dados extraídos pelo cfx
+* lsedit - gera visualização

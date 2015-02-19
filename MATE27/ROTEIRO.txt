@@ -1,0 +1,26 @@
+Recuperação de Arquitetura de Software
+O que é isso?
+Para que?
+Técnicas para a Recuperação da Arquitetura de Software
+* Processo de Recuperação da Arquitetura de Software
+** Fontes de Informação para a Recuperação da Arquitetura
+* Técnicas de Apoio ao Processo
+** Engenharia Reversa
+*** Engenharia Reversa Estática
+*** Engenharia Reversa Dinâmica
+** Agrupamentos de Elementos
+*** Utilização de Métricas para o Agrupamento de Classes
+** Recorte de Programas e Mapeamento de padrões
+** Técnicas de Outras Áreas
+Abordagens para a Recuperação da Arquitetura de Software
+* Recuperação Baseada em Estilos e Padrões Arquiteturais
+** Reconhecimento de Estilos Arquiteturais
+** Recuperação Suportada por Padrões
+* Recuperação Baseada no Conhecimento do Domínio e da aplicação
+** Consultas para a Identificação de Padrões do Domínio
+** Agrupamentos de Elementos com Base nos Conceitos do domínio
+** Recuperação Baseada na Combinação de grafos
+* Recuperação Baseada nos Requisitos Funcionais do sistema
+** Abordagem Direcionada por Casos de Uso
+** Abordagem Direcionada pelos Requisitos de Evolução do Software
+Considerações Finais
