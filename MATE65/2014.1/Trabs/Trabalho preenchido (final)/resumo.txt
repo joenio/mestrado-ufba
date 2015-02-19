@@ -1,0 +1,97 @@
+Protótipo da ferramenta Design Suite, conjunto de ferramentas para recuperação
+e visualização arquitetural com enfase em interoperabilidade com outras
+ferramentas através do formato GXL.
+
+Evolução de um grande conjunto de projetos open source. A análise
+da evolução de sistemas comerciais é uma área a muito tempo pesquisada
+pelos centros de pesquisas. Estes resultados podem ser usados para
+comparar a situação da evolução de sistemas comerciais com sistemas open
+source. Isto permitirá identificar se há diferenças significantes entre
+os processos de cada um. 
+
+O comportamento evolucionario é explorado usando modelos diferentes,
+o interessante fato é que enquanto a média de crescimento cai ao longo
+do tempo deacordo com as leis de evolução de software, especialmente
+projetos grandes com alto número de participantes.
+
+---
+
+How do committees invent?
+
+Como decisões de disign são tomadas, o design de uma organização reflete no design dos sistemas
+desenvolvidos por tal organização.
+
+Aplicamos mineração de dados a versões ao longo da história
+do projeto para guiar programadores, "quem alterou essas funções
+também alteraram ...". Dado um conjunto de mudanças, algumas regras
+tentam auxiliar os desenvolvedores a cometer menos erros em próximas
+mudanças. Foi desenvolvido um protótipo chamado ROSE que consegue predizer
+26% dos arquivos que devem ser alterados, e 15% de precisão para funcções
+e variáveis.
+
+ROSE pode ser uma ferramenta útil para sugerir futuras mudanças
+e avisar sobre alterações faltando. Mas quanto mais se aprende do histórico
+maior e melhor se tornam as sugestões.
+
+Modularização como mecanismo para melhorar a flexibilidade e compreensibilidade
+de um sistema enquanto permite reduzir o tempo de desenvolvimento.
+A efetividade de uma modularização é dependente de critérios usados para dividir
+o sistema entre módulos. Um problema é apresentado e tanto uma decomposição
+convencional quanto uma não-convencional são descritas. É mostrado q
+a não-convencional tem vantagens distintas para os objetivos traçados.
+A decomposicao nao-convencional, se implementada com suposições convencionais
+que um módulo consiste de um ou mais subrotinas, irá ser menos eficiente em
+maioria dos casos.
+
+Usualmente nada é dito sobre os critérios usados em dividir sistemas
+em módulos. Este artigo irá discutir que esse assunto sugere algum critério
+que pode ser usado em decompor um sistema em módulos.
+
+Tentou-se mostrar que decompor um sistema em módulos baseado em fluxogramas.
+Propomos ao invés que comece com uma lista de dificuldades de decisões de design
+que serão possivelmente alterados. Cada módulo é então desenhado para
+esconder essas decisões de outros. Então, na maioria dos casos, decisões de design
+transcendem tempo de execução, modulos irão nao corresponder aos passos de processamento.
+Para atacar eficientemente implementação nos precisamos abandonar a suposição que modulos é
+um ou mais subrotinas, ao invés, subrotinas e programas para montar correlacoes de
+codido de varios modulos.
+
+---
+
+Técnicas de Visualização para Avaliação e Melhoria de Qualidade de Software Livre e Aberto
+
+O modelo de desenvolvimento de SL ganhou a atencao da industria, mas tecnicas para medir a qualidade
+e entendimento do modelo dificulta a adoção e preocupa as empresas, assim torna-se importante
+tecnologias para auxiliar o entendimento de tais sistemas e modelos. Uma opção é a extração de métricas
+de software, quais fatores levam à qualidade e ao sucesso de um software livre? É importante entender
+estrutura, comportamento e evolução de um software. A combinação de aspectos técnicos com sociais para
+entender levam a informações mais sólidas sobre o processo de desenvolvimento.
+
+Um ponto de vista útil inicial para projetar interfaces graficas
+é o mantra da visualização de informação: visao geral primeiro, zoom e filtro,
+então detalhes sob demanda.
+
+Mas este é apenas o ponto de partida na tentativa de entender o
+rico e variado conjunto de informações de visualização que tem sido
+proposto nos anos recentes. Este artigo oferece uma tarefa por
+taxonomia de tipos de dados com sete tipos de dados e sete tarefas.
+
+Enquanto pesquisas prototipos tem tipicamente lidado apenas com
+um tipo de dado (1, 2 ou 3-dimensional), produtos comerciais de sucesso
+tem tido de acomodar diversos. Estes protudos terão que prover integracao
+com softwares existentes e suportar uma lista completa de tarefas: visao geral,
+zoom, filtro, detalhes sob demanda, relacionamento, histórico e extração.
+Estas idéias são atrativas porque elas apresentam informações rápidamente e
+permitem um rápido exploração controlada por usuário.
+
+Estudos sobre evolucao de software tem tentato entender a relacao entre software e seus
+desenvolvedores. Tais estudos usualmente requer extensivas ferramentas de suporte
+para lidar com grandes e complexos dados que precisam ser coletados processados e analizados.
+Entretanto inumeras ferramentas tem sido proposta, elas oferecem suporte limitado para estudar
+evolucao de software por considerar aspectos tecniso e sociais de forma isolada. Neste artigo
+descrevemos o XFlow, uma ferramenta extensivel para analise empirica da evolucao de software.
+
+XFlow, coleta dados de sistema de gerenciamento de configuracoes, precessa isso computando
+metricas e finalmente apresentando 5 poderosas e interativas visualizacoes. Tambem presentamos
+cenatios de uso ilustrativos envolvendo analise de 3 projetos de software livre, destacando as
+habilidades da ferramenta em prover informacoes uteis para formular e testar hipoteses.

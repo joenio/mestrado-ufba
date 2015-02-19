@@ -1,0 +1,57 @@
+23. Analyzing Java software by combining metrics and program visualization (nao encontrei o PDF)
+Abstract: Shimba, a prototype reverse engineering environment, has been built to support the understanding of
+Java software. Shimba uses Rigi and SCED to analyze, visualize, and explore the static and dynamic aspects,
+respectively, of the subject system. The static software artifacts and their dependencies are extracted from Java
+byte code and viewed as directed graphs using the Rigi reverse engineering environment. The static dependency
+graphs of a subject system can be annotated with attributes, such as software quality measures, and then be analyzed
+the Chidamber and Kemerer suite of object-oriented metrics. The metrics measure properties of the classes, the
+and visualized using scripts through the end-user programmable interface. Shimba has recently been extended with
+inheritance hierarchy, and the interaction among classes of a subject system. Since Shimba is primarily intended
+for the analysis and exploration of Java software, the metrics have been tailored to measure properties of software
+components written in Java. We show how these metrics can be applied in the context of understanding software
+systems using a reverse engineering environment. The static dependency graphs of the system under investigation
+are decorated with measures obtained by applying the object-oriented metrics to selected software components.
+Shimba provides tools to examine these measures, to find software artifacts that have values that are in a given range,
+and to detect correlations among different measures. The object-oriented analysis of the subject Java system can be
+investigated further by exporting the measures to a spreadsheet. (25 refs)
+
+11. Software visualization in software maintenance, reverse engineering, and re-engineering: A research survey
+Abstract: Software visualization is concerned with the static visualization as well as the animation of software
+artifacts, such as source code, executable programs, and the data they manipulate, and their attributes, such as size,
+complexity, or dependencies. Software visualization techniques are widely used in the areas of software maintenance,
+reverse engineering, and re-engineering, where typically large amounts of complex data need to be understood and
+a high degree of interaction between software engineers and automatic analyses is required. This paper reports
+the results of a survey on the perspectives of 82 researchers in software maintenance, reverse engineering, and
+re-engineering on software visualization. It describes to which degree the researchers are involved in software
+visualization themselves, what is visualized and how, whether animation is frequently used, whether the researchers
+believe animation is useful at all, which automatic graph layouts are used if at all, whether the layout algorithms
+have deficiencies, and - last but not least - where the medium-term and long-term research in software visualization
+should be directed. The results of this survey help to ascertain the current role of software visualization in software
+engineering from the perspective of researchers in these domains and give hints on future research avenues. (24 refs)
+
+31. Fast analysis of source code in C and C++
+Abstract: Static analysis is a popular tool for detecting the vulnerabilities that cannot be found by means of ordinary
+testing. The main problem in the development of static analyzers is their low speed. Methods for accelerating such
+analyzers are described, which include incremental analysis, lazy analysis, and header file caching. These methods
+make it possible to considerably accelerate the detection of defects and to integrate the static analysis tools in the
+development environment. As a result, defects in a file edited in the Visual Studio development environment can be
+detected in 0.5 s or faster, which means that they can be practically detected after each keystroke. Therefore, critical
+vulnerabilities can be detected and corrected at the stage of coding. © Pleiades Publishing, Ltd., 2013. (8 refs)
+
+38. Seesoft--A tool for visualizing line oriented software statistics
+Abstract: The Seesoft software visualization system allows one to analyze up to 50,000 lines of code simultaneously
+by mapping each line of code into a thin row. The color of each row indicates a statistic of interest, e.g., red rows are
+those most recently changed, and blue are those least recently changed. Seesoft displays data derived from a variety
+of sources, such as version control systems that track the age, programmer, and purpose of the code (e.g., control
+ISDN lamps, fix bug in call forwarding); static analyses, (e.g., locations where functions are called); and dynamic
+analyses (e.g., profiling). By means of direct manipulation and high interaction graphics, the user can manipulate this
+reduced representation of the code in order to find interesting patterns. Further insight is obtained by using additional
+windows to display the actual code. Potential applications for Seesoft include discovery, project management, code
+tuning, and analysis of development methodologies. (20 refs)
+
+60. Maintenance tools
+Abstract: After a brief overview by P. Oman, eight tools to help the maintenance programmer analyze and understand
+code are described in separate presentations. All of them are code-visualization tools. However, while all these
+tools show how a program is structured, they use different means to achieve different ends. The tools covered are:
+Objective-C Browser; Vifor; Seela; Battle Map; Act; Grasp/Ada; Expert Dataflow and Static Analysis; Surgeon's
+Assistant; and Dependency Analysis Tool Set.

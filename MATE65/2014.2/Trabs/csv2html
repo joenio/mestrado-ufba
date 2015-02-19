@@ -1,0 +1,78 @@
+#!/usr/bin/perl
+use Modern::Perl;
+use Text::CSV;
+$| = 1;
+
+my $INPUT = $ARGV[0];
+my $FORMAT = $ARGV[1] // 'compendex';
+my $TMP = "$INPUT.tmp.html";
+ 
+my $csv = Text::CSV->new({binary => 1})
+  or die Text::CSV->error_diag;
+
+open my $fh, '<', $INPUT or die $!;
+
+open STDOUT, '>', $TMP;
+
+say "<html>";
+say "<body>";
+if ($FORMAT eq 'compendex') {
+
+  say "<center>";
+  say "<h1>Apendice A</h1>";
+  say "<h2>Resultado da pesquisa na engine do Compendex Engineering Index</h2>";
+  say "<p>Palavras-chave pesquisadas:</p>";
+  say "<p>static, code, analysis, software, visualization</p>";
+  say "<p>String de busca:</p>";
+  say "<p>((((((static) WN All fields) AND ((code) WN All fields)) AND ((analysis) WN All fields)) AND ((software) WN All fields)) AND ((visualization) WN All fields))</p>";
+  say "</center>";
+
+
+  $csv->getline($fh);
+  while (my $row = $csv->getline($fh) ) {
+    say "<h3>$row->[0]</h3>";
+    say "<p>";
+    say "<strong>Author:</strong> $row->[2]<br/>";
+    say "<strong>Affiliation:</strong> $row->[3]<br/>";
+    say "<strong>Source:</strong> $row->[6]<br/>";
+    say "<strong>Pages:</strong> $row->[12]<br/>";
+    say "<strong>Year:</strong> $row->[15]<br/>";
+    say "</p>";
+  }
+}
+elsif ($FORMAT eq 'ieeexplore') {
+
+  say "<center>";
+  say "<h1>Apendice B</h1>";
+  say "<h2>Resultado da pesquisa na engine do IEEE Xplore Digital Library</h2>";
+  say "<p>Palavras-chave pesquisadas:</p>";
+  say "<p>static, code, analysis, software, visualization</p>";
+  say "<p>String de busca:</p>";
+  say "<p>(((((static) AND code) AND analysis) AND software) AND visualization)</p>";
+  say "</center>";
+
+  $csv->getline($fh);
+  $csv->getline($fh);
+  while (my $row = $csv->getline($fh) ) {
+    say "<h3>$row->[0]</h3>";
+    say "<p>";
+    say "<strong>Author:</strong> $row->[1]<br/>";
+    say "<strong>Affiliation:</strong> $row->[2]<br/>";
+    say "<strong>Source:</strong> $row->[3]<br/>";
+    say "<strong>Pages:</strong> $row->[8]-$row->[9]<br/>";
+    say "<strong>Year:</strong> $row->[5]<br/>";
+    say "</p>";
+  }
+}
+say "</body>";
+say "</html>";
+
+$csv->eof or $csv->error_diag;
+close $fh;
+$csv->eol("\r\n");
+
+close STDOUT;
+
+system "wkhtmltopdf '$TMP' $INPUT.pdf";
+
+unlink $TMP;

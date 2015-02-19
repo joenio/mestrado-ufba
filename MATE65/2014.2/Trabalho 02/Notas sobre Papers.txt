@@ -1,0 +1,218 @@
+Introdução à Engenharia de Software Experimental - Guilherme Travassos
+Notas sobre a leitura do relatório:
+
+Cita a importancia da experimentacao em engenharia de software, enumera
+os metodos: cientifico, de engenharia, experimental e analítico.
+
+Recomenta o artigo abaixo sobre a importancia de experimentação na área:
+[Basili96] "The Role of Experimentation in Software Engineering: Past, Present, Future"
+Victor R. Basili
+
+O objetivo básico do relatório é exemplificar conceitos relacionados à
+experimentação.
+
+Define experimentação...
+
+Artigos citados que podem ser interessantes para meu estudo:
+
+
+AMARAL, E. A. G.; TRAVASSOS, G. H. “Em busca de uma abordagem para
+Empacotamento de Experimentos em Engenharia de Software”
+
+Brooks, A., Dali, J., Miller, J., Roper, M., Wood, M., “Replication of Experimental
+Results in Software Engineering”
+
+------------------------------------------------------------
+
+Towards a Computerized Infrastructure for Managing Experimental Software Engineering Knowledge
+
+apresenta "experimental Software Engineering Environment (eSEE)", uma infra para instanciar
+experimentos em SE, gerenciar, planejar, executar e empacotar estudos em ESE.
+
+Eu acho muito ganancioso, pensar em uma infra capaz de tudo isso, mais interessante seria
+seguir a filosofia unix, pensar em pequenos sistemas (infra) para problemas especificos,
+e permitir que outras iniciativas surjam "ao redor".
+
+Empacotar (packaging) experimentos é útil, mas usualmente o "pacote" se perde, o autor hospeda
+em sua pagina pessoal, após alguns anos isto ficar fora do ar, e é impossível obter os mesmos
+dados para replicar o experimento. Isto dificulta verificar a credibilidade do estudo, impossibilita
+verificar a validade interna, e a validade externa replicando em outros contextos.
+
+O autor cita que utilizou o "Hyperwave infrastructure (http://www.haup.org)", em 17/12/14 tentei
+acesso e está "fora do ar".
+
+No campo de ESE, destaca o desafio de compartilhar de forma eficiente o conhecimento da experimentação
+entre replicadores, para facilitar comparações em replicações.
+
+Aponta 2 artigos com propostas de modelos para o problema acima [10] e [11] EKSM
+
+[10] Knowledge-Sharing Issues in Experimental Software Engineering - Basili, 2004
+[11] The Knowledge Creating Company - Nonaka, 1991
+
+"A laboratory package describes an experiment in specific terms and provides materials for
+replication, highlights opportunities for variation, and builds a context for combining results
+of different types of experimental treatments"
+
+"lab package" é o que eu acho necessário, ele já é algo amplamente usado, problema é que cada
+um faz da sua forma, hospeda onde quer, ou seja, dificulta a obtenção para ser replicado. Minha
+proposta é que para que isto seja eficiente a forma de obtenção deve ser simples e prática...
+
+Preciso ler sobre "packaging"
+
+O autor do artigo criou "TABA Project (www.cos.ufrj.br/~taba)", o qual encontra-se offline também!
+Encontrei apenas uma referencia no Google:
+
+http://lens-ese.cos.ufrj.br/ese/index.php?option=com_content&view=article&id=80:taba&catid=35:projetos-passados&Itemid=91&lang=en
+
+Um protótipo da proposta foi implementada baseada no processo de empacotamento proposto em [8].
+
+[8] Em busca de uma abordagem para Empacotamento de Experimentos em Engenharia de Software
+
+--------------------------------------------------------------------
+
+EMPACOTAMENTO DE EXPERIMENTOS CONTROLADOS COM ABORDAGEM EVOLUTIVA BASEADA EM ONTOLOGIA
+
+Artigo escrito em conjunto com orientador baseado na dissertação de mestrado abaixo:
+
+"Empacotamento de experimentos controlados em Engenharia de Software: uma abordagem baseada em ontologia"
+
+http://www.bv.fapesp.br/pt/bolsas/131060/empacotamento-de-experimentos-controlados-em-engenharia-de-software-uma-abordagem-baseada-em-ontolog/
+Autor: Lilian Passos Scatalon
+
+Grupo de pesquisadores com enfoque em experimentacao em SE, ISERN:
+
+* http://isern.iese.de/Portal/mod/page/view.php?id=8
+
+(interessante! tenho essa crença em experimentação também)
+
+A UFBA (LES/aSide) não é membro do ISERN mas acho que deveria ser... verificar isso!
+
+O conhecimento gerado por um estudo, incluindo a descrição dos procedimentos, resultados
+e conclusões é registrado no pacote de laboratório.
+
+(SHULL 2002) afirma que os pesquisadores enfrentam dificuldades em entender pacotes de laboratórios.
+
+O artigo apresenta uma ontologia chamada ExperOntology para mapear conceitos de um domínio específico,
+para proporcionar cooperação entre grupos de pesquisar distintos, para que possam entender o que o outro
+fez ou está fazendo em seus experimentos.
+
+Experimento controlado ....
+
+A ontologia mapeia conceitos para cada elemento do pacote de laoratório, e pode evoluir durante
+a execução do framework proposto no artigo, ou seja, retro-alimentar a propria ontologia... (isso
+vai criar um monstro no final das contas se essa evolução da ontologia for comulativa entre vários
+pesquisadores).
+
+O sucesso dessa proposta depende dos pesquisadores adotarem esta ontologia, o que pode
+ser uma resistencia.
+
+Pacotes de laboratório podem ter formato: estruturado (banco de dados), semi-estruturado (XML) ou não-estruturado
+(linguagem natural)
+
+-----------------------------------------------
+
+Knowledge-Sharing Issues in Experimental Software Engineering
+
+A experiencia mostra que replicação e lab packages não são a solução por sí próprios.
+
+As argued in that paper, we believe that effective replications require not only lab packages but also a process of replication
+involving the original researchers to support package instantiation, evolution, and use. The need for such a process implies
+an associated need for an effective collaboration structure between the original and replicating researchers to convey both
+the explicit (lab package) and the tacit knowledge that is important for the experimental process conformance.
+
+(é preciso ter contato entre as equipes que criou o pacote e a que vai replicar, um processo deve
+ ser seguido, isso dificulta a replicação)
+
+O artigo faz a pergunta abaixo, que pode ser meu tema de mestrado, eu poderia responder esta pergunta
+no contexto de meu interesse, avaliação de produto, código fonte, e artefatos relaciodos a ele, criando
+uma infra para troca de conhecimento comum entre pesquisadores.
+
+These techniques, guidelines and procedures will help us better understand and define the knowledge transfer process.
+But, effective replications require more research into the knowledge transfer process itself. For example, what kinds of
+collaboration mechanisms are necessary and sufficient for the information about a single experiment to be transferred from
+one researcher to another? What are the main steps in running an experiment and what information is necessary at each
+step?
+
+Meu título pode ser o seguinte:
+"Repositório para compartilhamento de dados de projetos de software favorecem colaboração entre
+pesquisadores em Engenharia de Software Experimental?"
+
+meta-repository = Repositório de meta-dados
+
+
+
+(devo citar software livre pois o foco serão projetos FLOSS)
+
+----------------------------------------------------------
+
+Projetos com ideias semelhantes:
+http://flossmole.org/
+http://mezuro.org/
+
+Suponho que uma dificuldade em realizar pesquisas que necessitem análise de código-fonte é o tempo tomado
+pelas análises, então um repositório com estes dados já existentes, com uma simples interface API para
+fácil acesso tanto via código, quanto via interface visual (web) facilitaria estudos baseados em extração
+de dados de códig-fonte.
+
+Um dos objetivos é atrair usuários e colabodores para esta plataforma, para isto ela deve ser bem desenhada,
+design simples, código limpo, testes automatizados, fácil criação de ambiente de desenvolvimento. Fácil instalação
+para usuários finais em diversas plataformas. Diante disso a ferramenta deve ser o mais simples possível.
+
+O termo usado no artigo abaixo para referenciar ao que eu penso em fazer é Repository of Repository (RoR) ou
+meta-repository *
+
+* https://en.wikipedia.org/wiki/Metadata_repository
+
+"Using Repository of Repositories (RoRs) to Study the Growth of FOSS Projects: A Meta-Analysis Research Approach"
+
+
+------------------------------------------------------------------------
+
+Using Repository of Repositories (RoRs) to Study the Growth of FOSS Projects: A Meta-Analysis Research Approach
+
+Cita que é crescente a necessidade de um repositório de meta-dados de repositórios de software entre os pesquisadores.
+Obter dados diretamente do repositório de projetos de software é lento e trabalhoso, obter esses meta-dados
+é mais fácil e necessário para novas pesquisas...
+
+O artigo propõe um modelo para RoRs, mas ele sugere que os pesquisadores além de consultar, também alimentem
+estes repositórios, fazendo assim o repositório evoluir. Isto em minha opnião não funciona, pois parte do
+pressuposto que o pesquisador terá tempo para investir em aprender como contribuir com o repositório. (Fig 1 mostra
+este modelo proposto, um framework conceitual)
+
+Além do FLOSSmole, que é a primeira iniciativa desta natureza, temos também o FLOSSMetrics (http://www.flossmetrics.org/).
+
+FLOSSMetrics suporta repositorio de codigo fonte, lista de email, issue tracking.
+
+Outros projetos similares:
+* Software Quality Observatory for Open Source Software or SQO-OSS (http://www.sqo-oss.eu/) - fora do ar!
+  (encontrei no Google info sobre o projeto: http://cordis.europa.eu/project/rcn/79362_en.html)
+
+* QUALity of Open Source Software or QUALOSS (http://www.qualoss.org/) - fora do ar!
+
+------------------------------------------------------------------------------------
+
+
+FLOSSmole: A collaborative repository for FLOSS research data and analyses
+
+Este artigo afirma exatamente o que eu penso sobre ter dados já prontos sobre softwares para
+pesquisadores poderem replicar estudos sob uma base comum.
+
+Creating a collaborative data and analysis repository for research on FLOSS is important
+because research should be as reproducible, extendable and comparable as possible.
+
+A Fig 1 exemplifica muito bem o que cada pesquisador usualmente faz ao analisar algum projeto
+dentro de suas experimentações/pesquisas.
+
+------------------------------------------------------------------------------------
+
+Monitoramento de métricas de código-fonte em projetos de software livre
+
+Cita outras iniciativas além das citadas nos artigos acima:
+
+* Ohloh (não-livre)
+* FOSSology - verifica licenças declaradas no código
+* QualiPSo
+* Mezuro + Kalibro + Analizo
+* HackyStat
+  https://code.google.com/p/hackystat/
+  https://en.wikipedia.org/wiki/Hackystat

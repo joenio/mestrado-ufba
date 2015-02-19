@@ -1,0 +1,6 @@
+Ferramentas e serviços de apoio à experimentação em Engenharia de Software: Estado da arte
+Joenio Marques da Costa
+
+Palavras-chave: Experimentação; ferramentas; meta-dados;
+
+Estudos em engenharia de software com foco em experimentação são muito importantes [Basili96], inúmeras pesquisas tem propostas de ambientes e ferramentas para propiciar a replicação dos experimentos [2], no entando ainda não há consenso entre pesquisadores, cada um fazendo ao seu modo, uma proposta [3] é utulizar ontologias para mapear conceitos entre pacotes de laboratórios quando se trata de experimentos controlados, propostas tem sido implementadas para solucionar tal problema [4]. No entando estas propostas e modelos parecem bastante ambiciosos pois descrevem cada ponto do experimento, proponto uma metodologia que deve ser seguida à risca por novas pesquisas, isto pode representar resistencia, além de, como citado em [3], gerar dificuldades na compreensão destes pacotes e na troca de conhecimento entre equipes. Uma solução pode ser meta-repositórios [5], ou repositórios contendo meta-dados extraídos de repositórios de código-fonte, bugs, emails, etc. O caminho pode ser ter dados nestes meta-repositórios [6] para proporcionar facilidade de replicação de estudos, aumentando a validade interna dos mesmos.

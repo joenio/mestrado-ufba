@@ -1,0 +1,37 @@
+Design Suite: Towards an Open Scientific Investigation
+Environment for Software Architecture Recovery
+
+Pesquisas experimentais sobre recuperação arquitetural sofrem com
+a ausência de ambientes de experimentação científicos abertos. Além disso, as
+ferramentas atuais possuem baixa interoperabilidade. Este artigo apresenta a
+Design Suite, uma suíte de ferramentas que tenta atacar estas questões e que
+permite extrair designs de código-fonte, abstraí-los em visões arquiteturais
+estruturais e visualizá-las em diferentes leiautes. Designs e visões
+arquiteturais são representados por multigrafos dirigidos, tipados e com
+atributos, os quais podem ser trocados entre as ferramentas através de GXL,
+um padrão baseado em XML. Uma prova de conceito é apresentada como
+avaliação preliminar da suíte.
+
+Evolution of Open Source Software Systems – A Large-Scale
+Investigation
+
+Abstract – In this paper, the evolution of a large sample of
+open source software projects will be analysed. The evolution
+of commercial systems has been an issue that has long been a
+center of research, thus a coherent theoretical framework of
+software evolution has been developed and empirically tested.
+Therefore these results can be used to compare the situation in
+open source projects to the evolution of commercial projects.
+This allows to assess whether the underlying software process
+indeed significantly differs. The data collection methodology
+relying on a large software repository and the respective
+source code control systems is described, and an overview on
+the collected data on several thousand projects is given. The
+evolutionary behaviour is explored using both a linear and a
+quadratic model, with the quadratic model significantly
+outperforming the linear one. The most interesting fact is that
+while in the mean the growth rate is decreasing over time
+according to the laws of software evolution, especially larger
+projects with a higher number of participants might be more
+often able to sustain super-linear growth.
+

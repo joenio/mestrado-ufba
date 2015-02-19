@@ -1,0 +1,68 @@
+A análise e estudo da evolução de sistemas comerciais é uma área há muito
+tempo pesquisada pelos centros de pesquisas em engenharia de software, isto
+proporcionou a criação e evolução de diversas técnicas e frameworks para este
+tipo de análise. O mesmo não ocorreu no contexto de sistemas "open source" que
+carecem de experiências neste sentido, dessa forma um estudo foi feito com o
+intuito de utilizar os resultados de anos de pesquisas em sistemas comerciais
+em novas pesquisas focadas em sistemas "open source", com o objetivo de
+comparar seus resultados e identificar se existem diferenças significativas
+entre os processos de desenvolvimento de cada um. Isto irá proporcionar um
+entendimento maior da evolução de sistemas "open source", além de jogar luz
+sobre como estes sistemas são desenvolvidos. Sabe-se ainda muito pouco sobre
+alguns aspectos do desenvolvimento de softwares, especialmente sobre como
+desenvolvedores tomam decisões de design relativas a modularização por
+exemplo. Durante o design e o desenvolvimento de software comumente nada é
+dito sobre quais critérios devem ser utilizados para dividir um sistema em
+módulos, cada desenvolvedor toma decisões inidivuais. Estudos foram feitos com
+o objetivo de identificar tais critérios e tentou-se mostrar alternativas à
+simples estratégia de pensar módulos de sistemas como simples fluxogramas de
+forma que ao invés de começar com uma lista de dificuldades de decisões de
+design desenha-se cada módulo como um conjunto de subrotinas relacionadas.
+Neste caminho entre o processo de desenvolvimento e o produto final
+desenvolvido estudos sobre evolucao de software tem tentato entender a relacao
+entre software e seus desenvolvedores.  Tais estudos usualmente requerem
+ferramentas de suporte para lidar com grandes volumes de dados, estes dados
+são complexos e precisam ser coletados, processados e analizados. Inúmeras
+ferramentas tem sido propostas, mas a maioria delas oferecem suporte limitado
+ao estudo da evolucao de software que considerem aspectos técnicos e sociais
+em conjunto. Assim nasce a ferramenta XFlow, uma ferramenta extensivel para
+analise empirica da evolucao de software considerando aspectos técnicos e
+sociais, esta ferramenta coleta dados de sistema de gerenciamento de
+configuracoes, precessa tais informações computando metricas e finalmente
+apresenta poderosas e interativas visualizacoes. A ferramenta ainda destaca-se
+por possuir habilidades para prover informações úteis para formular e testar
+hipóteses.
+
+---
+
+The analysis and study of the evolution of commercial systems is an area long
+time studied by research centers in software engineering, this led to the
+creation and evolution of various techniques and frameworks for this type of
+analysis. This doesn't occur in the context of the "open source" systens that
+lack of experience in this sense, thus a study was done in order to use the
+results of years of research in commercial systems in a new research focused
+on "open source" systems, with the goal of compare their results and to
+identify whether there are significant differences between the processes of
+development of each. This will provide a greater understanding of the
+evolution of "open source" systems, and shed light about how these systems are
+developed. Very little is known about some aspects of software development,
+especially on how developers make design decisions regarding modularization by
+instance. During the design and development of software is commonly nothing
+said about which criteria should be used to divide a system into modules, each
+developer takes inidivuais decisions. Studies were made to identify such
+criteria and we tried to show alternatives to simple strategy of thinking
+systems modules as simple flowcharts so that instead of starting with a list
+of difficulties decisions design each module is drawn as a set of related
+subroutines.  In this way between the development process and the final
+product developed studies on evolution of software has trying to understand
+the relationship between software and its developers. Such studies usually
+require support tools to handle large volumes of data, these data are complex
+and need to be collected, processed and analyzed. numerous tools have been
+proposed, but most of them offer limited support the study of the evolution of
+software to consider technical and social aspects together. Thus was born the
+XFlow tool, a tool for extensible empirical analysis of the evolution of
+software considering technical and social aspects, this tool collects data
+management system configurations, such information precesses computing metrics
+and finally presents powerful and interactive visualizations. The tool still
+stands out to possess skills to provide useful information for formulating and
+testing hypotheses.

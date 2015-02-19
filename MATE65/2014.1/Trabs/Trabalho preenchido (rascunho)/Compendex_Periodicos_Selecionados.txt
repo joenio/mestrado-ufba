@@ -1,0 +1,24 @@
+2. Comparing software architecture descriptions and raw source-code: A statistical analysis of maintainability metrics
+
+7. A Framework for automatically mining source code
+
+11. E-quality: A graph based object oriented software quality visualization tool
+
+13. AODE for source code metrics for improved software maintainability
+
+14. Attractiveness of open source projects: A path to software quality
+
+16. Visualization of software architecture graphs of Java systems: Managing propagated low level dependencies
+
+23. Securing opensource code via static analysis
+
+24. Sociotechnical coordination and collaboration in open source software
+(artigo interessante de ler no contexto da minha pesquisa)
+
+32. Attractiveness of free and open source projects
+
+44. Modular specification and checking of structural dependencies
+
+58. Mining development repositories to study the impact of collaboration on software systems
+
+
