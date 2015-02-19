@@ -1,0 +1,19 @@
+28/08/2014 - Planejamento para a próxima semana
+
+Presentes:
+ * Joenio
+
+Pautas:
+
+ * Ler o relatorio final do projeto FOSSMetrics
+   "Free/Libre/Open Source Metrics and Benchmarking - FLOSSMetrics Final Report"
+ * Pesquisar sobre o seguinte projeto
+   * http://sqo-oss.org
+ * Fazer pesquisas e estudos pendentes do ultimo planejamento
+
+O que foi feito na semana que passou:
+
+ * Leitura da tese de doutorado de Antonio Terceiro
+   "Caracterização da Complexidade Estrutural em Sistemas de Software Livre"
+ * Tentei acessar http://qualipso.org/ mas está fora do ar
+   (aparentemente o projeto morreu)

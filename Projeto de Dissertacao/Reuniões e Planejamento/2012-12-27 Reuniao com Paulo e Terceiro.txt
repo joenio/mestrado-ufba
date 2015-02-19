@@ -1,0 +1,35 @@
+27/12/2012 - Reunião de planejamento sobre Analizo/Doxyparse
+
+Presentes:
+ * Joenio
+ * Terceiro
+ * Paulo
+
+Pautas:
+
+ * Mestrado de Joenio e definição do tema
+   * Alguma coisa com Analizo
+     * Implementar o suporte a multiplo parsers, manter o Doxyparse e avaliar o Analizo junto ao BxRef + Doxyparser
+     * Cada parser irá dizer quais métricas suporta
+   * DSM (idéia de Roberto)
+     * Terceiro tinha vontade de mexer com isso também
+   * projeto FAPESB com Christina pra fazer coisas na Analizo
+ * Futuro do Doxyparse
+   * Substituir o Doxyparse não é "perfumaria", precisamos de um parser maduro, clang parece ser uma boa opção
+ * Otimizações e novas funcionalidades do Analizo
+   * Outro parsers: BxRef/Perl: https://gitorious.org/+mezuro/analizo/analizo-bxref
+   * PENDENTE: refatoração (merge request em fev/2012 https://gitorious.org/analizo/analizo/merge_requests/1)
+   * Sugestão: parser por linguagem
+   * Criar módulos Analizo::Languages, que vai conter um HASH com linguagens como chave, e como valores HASHes indicando quais são as extensões de arquivo daquela linguagem e qual o extrator usado para aquela linguagem. Alterar Analizo::LanguageFilter pra usar esse HASH do Analizo::Languages, mover o conteúdo do HASH $FILTERS para Analizo::Languages.
+
+ * Tópicos de pesquisa
+
+   * Valores de Referência (preferencialmente não Java) - Pode ser
+     * Artigo: Valores de Referencia para Metricas de Softwares Orientados a Objetos (SBES 2009)
+       Kessia Ferreira
+
+   * Pesquisas de uso e satisfação de desenvolvedores com o uso Analizo (Eng. Soft. Experimental) - Não
+
+   * Visualização de Software (com foco em comunidade de SL) - Pode ser
+      * DMS é um possível tema dentro deste tópico
+     Artigo: XFlow - An Extensible Tool for ...

@@ -1,0 +1,17 @@
+tecnica de recuperacao arquetural: bunch, acdw, dca, limbo, arch.
+
+Ler o artigo:
+A comparative analysis of software architecture recovery technique
+Revealing the relationships between architectural elements and source code characteritcs
+
+Ferramenta de Sandro:
+http://www.academia.edu/7161535/Um_Framework_para_Recupera%C3%A7%C3%A3o_Arquitetural_Independente_de_Plataforma
+
+Ler artigos de sandro!
+
+Procurar artigos de crescencio tb!
+
+Ideia do projeto de crescencio:
+Recuperar arquitetura de softwares parecidos de mesmo dominio, comparar
+e identificar o que tem em comum e sugerir uma arquitetura de linha de produto
+para este dominio.
