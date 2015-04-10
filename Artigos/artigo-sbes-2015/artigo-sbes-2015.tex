@@ -1,20 +1,25 @@
-\documentclass[11pt]{article}
+\documentclass[conference]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage{fancyvrb}
-%\usepackage[alf]{abntcite}
-%\bibliographystyle{abnt-alf}
 \bibliographystyle{ieeetr}
-%\usepackage[top=0.1in,left=0.5in,right=0.5in,bottom=0.1in]{geometry}
 
-\title{Ferramentas desenvolvidas durante pesquisas em engenharia de software no Brasil: \\
-        Uma análise dos últimos 10 anos de SBES (?)
+\title{
+  Ferramentas desenvolvidas durante pesquisas em engenharia de software no Brasil:\\
+  Uma análise dos últimos 15 anos de SBES
 }
-\author{Joenio Marques da Costa \\
-  {\small Universidade Federal da Bahia (UFBA)} \\
-  {\small joenio@colivre.coop.br}
+
+\author{
+  \IEEEauthorblockN{Joenio Marques da Costa}
+  \IEEEauthorblockA{Universidade Federal da Bahia (UFBA)\\
+    Email: joenio@colivre.coop.br
+  }
+  \and
+  \IEEEauthorblockN{Autor 2...}
+  \IEEEauthorblockA{Twentieth Century Fox\\
+    Email: homer@thesimpsons.com
+  }
 }
-\date{\today}
 
 \begin{document}
 
@@ -22,150 +27,147 @@
 
 \begin{abstract}
 \dots
-
-Artigo revisao de ferramentas desenvolvidas dentro do contexto ou
-durante pesquisas da área de engenharia de software nos últimos 15
-anos, quais ferramentas continuam funcionando, quais continuam
-recebendo atenção e evoluindo.
-
-Referência, artigo de Paulo e Kon do SBES 2011, fizeram um estudo
-revisando os últimos X anos do congresso, trilha ferramentas, avaliou
-quais ferramentas foram disponibilizadas e distribuídas como software
-livre.
-
 \end{abstract}
 
 \section{Introdução}
 
-Cavalcanti et al\cite{Cavalcanti11} desenvolveram revisão sistemática das
-últimas 24 edições do SBES, utilizaram o método proposto por Kitchenham e
-Charters\cite{Kitchenham2007}...  O meu estudo seguirá o mesmo formato
-desenvolvido no trabalho de Calvacanti\cite{Cavalcanti11}, mas com a mudança
-de foco de pesquisas da área de engenharia de software no geral, para
-pesquisas em engenharia de software que propõe e/ou desenvolvem ferramentas de
-software. Objetivo de identificar informações quantitativas e qualitativas
-sobre a produção de ferramentas durantes pesquisas em engenharia de software,
-este objetivo é semelhante ao objetivo do trabalho de \cite{Cavalcanti11} mas
-com foco em ferramentas. Este trabalho de cavalcanti mostra também que há uma
-grande concentração de pesquisas apresentando ferramentas, métodos e processos
-submetidos ao SBES entre as edições avaliadas, 1987 à 2010.
+%Muita ênfase é dada ao processo científico, mas em nossa área de ES é comum
+%desenvolver-se ferramentas durantes as pesquisas, é notório que ferramentas
+%são necessárias já que muitos pesquisadores as desenvolvem, mas porque é dado
+%tão pouco enfoque as ferramentas? Elas não deveriam ser melhor avaliadas e
+%também ter maior atenção por parte de quem desenvolve ou de quem avalia um
+%certo trabalho de pesquisa?
 
-Em \cite{Kon11} é citado que foram analisados 6773 projetos usando ferramentas
-automatizadas para avaliar a atratividade de um software a partir de métricas
-extraídas do código-fonte, este estudo:
 
-A study of the relationships between source code metrics and attractiveness in free software projects
 
-pode talvez ser replicado em projetos desenvolvidos pela comunidade acadêmica,
-isso vai avaliar se os projetos sao atrativos ou não.
+% Cavalcanti et al\cite{Cavalcanti11} desenvolveram revisão sistemática das
+% últimas 24 edições do SBES, utilizaram o método proposto por Kitchenham e
+% Charters\cite{Kitchenham2007}...  O meu estudo seguirá o mesmo formato
+% desenvolvido no trabalho de Calvacanti\cite{Cavalcanti11}, mas com a mudança
+% de foco de pesquisas da área de engenharia de software no geral, para
+% pesquisas em engenharia de software que propõe e/ou desenvolvem ferramentas de
+% software. Objetivo de identificar informações quantitativas e qualitativas
+% sobre a produção de ferramentas durantes pesquisas em engenharia de software,
+% este objetivo é semelhante ao objetivo do trabalho de \cite{Cavalcanti11} mas
+% com foco em ferramentas. Este trabalho de cavalcanti mostra também que há uma
+% grande concentração de pesquisas apresentando ferramentas, métodos e processos
+% submetidos ao SBES entre as edições avaliadas, 1987 à 2010.
 
-\cite{Kon11} cita também que ocorre o fato de algumas ferramentas serem
-disponibilizadas publicamente, mas o link divulgado não funciona mais, ou está
-fora do ar, ou não cita a ferramenta.
+% TRABALHO FUTURO
+% Em \cite{Kon11} é citado que foram analisados 6773 projetos usando ferramentas
+% automatizadas para avaliar a atratividade de um software a partir de métricas
+% extraídas do código-fonte, este estudo:
+% 
+% A study of the relationships between source code metrics and attractiveness in
+% free software projects.
+% 
+% Pode talvez ser replicado em projetos desenvolvidos pela comunidade acadêmica,
+% isso vai avaliar se os projetos sao atrativos ou não.
 
-Kon11 também cita em sua conclusão que percebeu em seu estudo uma tendência no
-aumento de pesquisadores Brasileiros em liberar suas ferramentas como FLOSS,
-tendo como benefício para estas pesquisas facilidade de reprodução por outros
-pesquisadores, bem como oportunidade de receberem contribuições externas
-melhorando suas ferramentas.
+% \cite{Kon11} cita também que ocorre o fato de algumas ferramentas serem
+% disponibilizadas publicamente, mas o link divulgado não funciona mais, ou está
+% fora do ar, ou não cita a ferramenta.
+% 
+% Kon11 também cita em sua conclusão que percebeu em seu estudo uma tendência no
+% aumento de pesquisadores Brasileiros em liberar suas ferramentas como FLOSS,
+% tendo como benefício para estas pesquisas facilidade de reprodução por outros
+% pesquisadores, bem como oportunidade de receberem contribuições externas
+% melhorando suas ferramentas.
 
-A comunidade de engenharia de software encontra dificuldades em utilizar
-ferramentas desenvolvidas pela própria academia em suas pesquisas, seja por
-dificuldade em obter o software, problemas com licenciamento, setup e
-configurações complexas, ou outro.
+% PROBLEMA QUE TALVEZ EXISTA ENTRE PESQUISAS QUE DESENVOLVEM FERRAMENTAS
+% \cite{Leite11} conclui em uma revisão sistemática de literatura de 5 anos
+% analizando as publicações do SBES entre os anos de 2006 e 2010, com objetivo
+% de dar uma visão geral das publicações recentes do SBES e analisar a
+% relevancia para a comunidade e industria, percebeu que há uma incipiente
+% colaboração entre universidades nas pesquisas.
 
-Como consequência deste problema, podemos citar:
+Pesquisadores de engenharia de software encontram dificuldades em utilizar
+ferramentas desenvolvidas pela comunidade acadêmica em suas pesquisas,
+estas dificuldades geram como consequência ao menos dois problemas:
 
 \begin{itemize}
-\item Duplicação de esforço, pesquisador não adota ferramentas existentes e
-        desenvolve sua própria solução
-\item Dificuldade em replicar experimentos, necessário para aumentar a
-        validade externa dos estudos. Kon \cite{Kon11} sugere que distribuir
-        ferramentas como software livre pode resolver este cenário.
+\item Duplicação de esforço
+  %- {\it pesquisador não utiliza ferramenta existente e desenvolve sua própria solução}
+\item Dificuldade em replicar estudos
+  %- {\it pesquisador não consegue reproduzir pesquisas com exatidão}
+%        algo necessário para aumentar a validade externa dos estudos
+%        Kon \cite{Kon11} sugere que distribuir
+%        ferramentas como software livre é requisito para evitar este problema
 % TODO devo pesquisar sobre estudos que apontam a importancia de
         % reprodubilidade de pesquisas científicas de modo geral para dar
         % lastro a este argumento aqui
 \end{itemize}
 
-Para ajudar a entender tal problema será feito um levantamento de
-"ferramentas" (*) de software desenvolvidas durante pesquisas acadêmicas em
-engenharia de software nos últimos 15 anos. Tais ferramentas serão então
-caracterizadas a partir dos seguintes critérios:
+Para possibilitar resolver estes problemas é necessário entender quais fatores
+geram dificuldades aos pesquisadores na utilização de ferramentas.
+
+Com isto em mente será feita uma caracterização das ferramentas
+desenvolvidas nos últimos 15 anos de pesquisas em engenharia de software no
+Brasil, esta caracterização ocorrerá através de uma revisão sistemática de
+literatura de trabalhos submetidos ao Simpósio Brasileiro de Engenharia de
+Software (SBES), tal revisão será guiada a partir das seguintes questões sobre
+cada ferramenta:
 
 \begin{itemize}
-\item É utilizada pela comunidade de pesquisa em engenharia de software?
+\item Quando foi lançada publicamente?
+\item Quando recebeu sua última atualização?
+\item Qual pesquisador desenvolveu?
+\item Qual grupo de pesquisa desenvolveu?
+\item Dá suporte para quais sistemas operacionais?
+\item Em qual linguagem de programação foi escrita?
+\item Em quais momentos foi utilizada após o lançamento?
+\item Qual pesquisador utilizou após o lançamento?
+\item Quais grupos de pesquisa utilizaram após o lançamento?
+\item Qual problema resolve, qual o domínio?
 \item É utilizada fora do seu grupo de pesquisa?
-\item Há quanto tempo a ferramenta existe?
-\item Há quanto tempo continua em uso pela comunidade de pesquisa?
-\item Qual problema a ferramenta resolve?
-\item É utilizada fora da comunidade acadêmica?
-\item É adotada pela indústria?
+\item É utilizada fora da comunidade acadêmica? É adotada pela indústria?
 \item É derivada ou é extensão de alguma outra ferramenta?
 \item Tem cobertura de testes?
+\item Qual o nível da cobertura de testes?
 \item Tem documentação?
-\item etc
-\item etc
+\item Em quais idiomas a documentação está disponível?
+\item Como se deu a evolução histórica das ferramentas em quantidade, autores
+  e organizações no SBES? (questão adaptada do trabalho de
+  \cite{Cavalcanti11})
+\item Quais os autores mais ativos em publicação de ferramentas no SBES?
+  (questão adaptada do trabalho de \cite{Cavalcanti11})
+\item Como se deu a evolução de quantidade de ferramentas publicadas no SBES?
+  (questão adaptada do trabalho de \cite{Cavalcanti11})
+\item Quantos artigos fazem referência à ferramenta? Ou ao artigo que propôs a
+  ferramenta?
 \end{itemize}
 
-% Uma vez encontrada uma ferramenta existe dificuldade em sua adoção/uso?
-
-\begin{itemize}
-\item {\it Definir melhor “ferramenta”, o termo está vago.}
-\end{itemize}
-
-Isto irá medir a disponibilidade das ferramentas desenvolvidas pela comunidade
-acadêmica ao longo do tempo e possivelmente dará indícios de ...
-
-% \section{Coleta e análse dos dados}
-% %* o plano de coleta e análise dos dados
+Esta caracterização dará uma visão geral sobre as ferramentas desenvolvidas em
+pesquisas de engenharia de software no Brasil, bem como permitirá entender
+aspectos do ciclo de vida de cada ferramenta.
 
 \section{Metodologia}
 
 \begin{itemize}
-\item Levantar revisões sistemáticas de literatura na área de engenharia de
-  software, pode haver algum estudo anterior com a mesma abordagem e que
-  responda aos problemas citados aqui
-\item Levantar revisões sistemáticas de literatura com foco em “ferramentas"
-  (*) para engenharia de software, pode existir estudos similares ou
-  complementares ao problema levantado aqui
+\item Levantar revisões sistemáticas de literatura de engenharia de software\\
+        {\it pode haver algum estudo anterior com a mesma abordagem e que
+        responda ao mesmo problema}
+\item Levantar revisões sistemáticas de literatura sobre ferramentas de
+        engenharia de software\\
+        {\it pode existir estudos similares ou complementares}
 \item Iniciar revisão sistemática de literatura para responder ao problema
-  definido
+        definido\\
+        {\it buscar estudos dos últimos 15 anos de pesquisas em engenharia de
+        software}
 \end{itemize}
 
 \section{Conclusão}
 
-Kon \cite{Kon11} conclui que construir ferramentas como software livre gera
-transferencia de tecnologia em várias vias, uma delas é que proporciona
-pesquisadores terem acesso a uma gama enorme de ferramentas existentes já
-construídas pela comunidade acadêmica, deixando assim espaço para que o
-pesquisador foque seu estudo em sua área de pesquisa, e não se desvie tendo
-que desenvolver suas próprias ferramentas, perdendo tempo que poderia ser
-usado para se aprofundar mais em suas pesquisas. (esta afirmação de Kon é algo
-que eu quero também concluir em minha pesquisa).
+\ldots
 
-% \section{Resumo para publicação}
-% 
-% Estudos em engenharia de software com foco em experimentação são muito
-% importantes\cite{theRoleOfExperimentation}, inúmeras pesquisas tem trazido
-% propostas de ambientes e ferramentas para propiciar a replicação dos
-% experimentos \cite{towardsAComputerizedInfrastructure} de uma maneira mais
-% precisa e simples, no entando ainda não há consenso entre pesquisadores, é
-% comum cada pesquisador realizar experimentos ao seu modo, para mitigar tais
-% problemas uma proposta recente se baseia no uso ontologias
-% \cite{knowledgeSharingIssues} para mapear conceitos entre pacotes de
-% laboratórios para experimentos controlados, algumas propostas tem sido
-% implementadas neste sentido (DO AMARAL, 2002). No entanto tais propostas e
-% modelos parecem bastante ambiciosos pois descrevem cada detalhe de como
-% executar e empacotar experimentos, com uma metodologia que deve ser seguida à
-% risca por cada pesquisador, isto representa dificuldades
-% \cite{knowledgeSharingIssues} na troca de conhecimento entre equipes. Uma
-% solução pode ser alcançada através de meta-repositórios
-% \cite{usingRepositoryOfRepositories}, ou repositórios contendo meta-dados
-% extraídos de repositórios de código-fonte, bugs, emails, etc. Este caminho
-% \cite{flossmoleACollaborativeRepository} pode proporcionar um grau de
-% facilidade ne replicação de estudos experimentais, aumentando a validade
-% interna e externa dos mesmos.
+%Kon \cite{Kon11} conclui que construir ferramentas como software livre gera
+%transferencia de tecnologia em várias vias, uma delas é que proporciona
+%pesquisadores terem acesso a uma gama enorme de ferramentas existentes já
+%construídas pela comunidade acadêmica, deixando assim espaço para que o
+%pesquisador foque seu estudo em sua área de pesquisa, e não se desvie tendo
+%que desenvolver suas próprias ferramentas, perdendo tempo que poderia ser
+%usado para se aprofundar mais em suas pesquisas. (esta afirmação de Kon é algo
+%que eu quero também concluir em minha pesquisa).
 
 \bibliography{bibliografia}
-
 \end{document}
