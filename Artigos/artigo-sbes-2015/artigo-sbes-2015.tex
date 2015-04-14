@@ -6,7 +6,7 @@
 
 \title{
   Ferramentas desenvolvidas durante pesquisas em engenharia de software no Brasil:\\
-  Uma análise dos últimos 15 anos de SBES
+  Uma análise dos últimos 21 anos de SBES
 }
 
 \author{
@@ -14,31 +14,15 @@
   \IEEEauthorblockA{Universidade Federal da Bahia (UFBA)\\
     Email: joenio@colivre.coop.br
   }
-  \and
-  \IEEEauthorblockN{Autor 2...}
-  \IEEEauthorblockA{Twentieth Century Fox\\
-    Email: homer@thesimpsons.com
-  }
 }
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-\dots
-\end{abstract}
-
-\section{Introdução}
-
-%Muita ênfase é dada ao processo científico, mas em nossa área de ES é comum
-%desenvolver-se ferramentas durantes as pesquisas, é notório que ferramentas
-%são necessárias já que muitos pesquisadores as desenvolvem, mas porque é dado
-%tão pouco enfoque as ferramentas? Elas não deveriam ser melhor avaliadas e
-%também ter maior atenção por parte de quem desenvolve ou de quem avalia um
-%certo trabalho de pesquisa?
-
-
+%\begin{abstract}
+%\dots
+%\end{abstract}
 
 % Cavalcanti et al\cite{Cavalcanti11} desenvolveram revisão sistemática das
 % últimas 24 edições do SBES, utilizaram o método proposto por Kitchenham e
@@ -81,51 +65,60 @@
 % relevancia para a comunidade e industria, percebeu que há uma incipiente
 % colaboração entre universidades nas pesquisas.
 
-Pesquisadores de engenharia de software encontram dificuldades em utilizar
-ferramentas desenvolvidas pela comunidade acadêmica em suas pesquisas,
-estas dificuldades geram como consequência ao menos dois problemas:
+\section{Introdução}
+
+Softwares são utilizados em praticamente todas as áreas do conhecimento
+humano, sua utilização é crescente em todas elas, no meio acadêmico
+pesquisadores utilizam mais e mais softwares para apoiarem suas pesquisas, em
+engenharia de software isto se torna particularmente evidente já que
+muitas pesquisas resultam também na criação de novos softwares, ou,
+novas {\it ferramentas de pesquisa}.
+
+Entender como essas {\it ferramentas de pesquisa} são publicadas e mantidas ao
+longo do tempo é crucial para dar os primeiros passos na solução do seguinte
+problema: dificuldade enfrentada pelos pesquisadores na utilização de {\it
+ferramentas de pesquisa}.
+
+%, a relevância
+%desse problema justifica-se pelo impacto causado na replicação de estudos.
+%
+%constatado no Brasil a partir de um estudo feito em 24 edições do SBES
+%mostrando que há uma concentração de
+%publicações apresentando ferramentas de software\cite{Cavalcanti11}.
+%
+%foco deste estudo, levam os pesquisadores a enfrentarem barreiras na
+%utilização de {\it ferramentas de pesquisa} em seus estudos, causando dois
+%problemas imediatos: duplicação de esforço e dificuldade em replicar
+%pesquisas.
+%
+% \begin{itemize}
+% \item Duplicação de esforço
+%   %- {\it pesquisador não utiliza ferramenta existente e desenvolve sua própria solução}
+% \item Dificuldade em replicar estudos
+%   %- {\it pesquisador não consegue reproduzir pesquisas com exatidão}
+% %        algo necessário para aumentar a validade externa dos estudos
+% %        Kon \cite{Kon11} sugere que distribuir
+% %        ferramentas como software livre é requisito para evitar este problema
+% % TODO devo pesquisar sobre estudos que apontam a importancia de
+%         % reprodubilidade de pesquisas científicas de modo geral para dar
+%         % lastro a este argumento aqui
+% \end{itemize}
+
+Nesse sentido, será feita uma caracterização das {\it ferramentas de pesquisa}
+desenvolvidas nos últimos 21 anos de pesquisa em engenharia de software no
+Brasil através de uma revisão sistemática de literatura, esta revisão será
+feita a partir de trabalhos submetidos ao Simpósio Brasileiro de Engenharia
+de Software (SBES) na trilha ferramentas, tal revisão será guiada pelas
+seguintes questões, a serem respondidas para cada ferramenta:
 
 \begin{itemize}
-\item Duplicação de esforço
-  %- {\it pesquisador não utiliza ferramenta existente e desenvolve sua própria solução}
-\item Dificuldade em replicar estudos
-  %- {\it pesquisador não consegue reproduzir pesquisas com exatidão}
-%        algo necessário para aumentar a validade externa dos estudos
-%        Kon \cite{Kon11} sugere que distribuir
-%        ferramentas como software livre é requisito para evitar este problema
-% TODO devo pesquisar sobre estudos que apontam a importancia de
-        % reprodubilidade de pesquisas científicas de modo geral para dar
-        % lastro a este argumento aqui
-\end{itemize}
-
-Para possibilitar resolver estes problemas é necessário entender quais fatores
-geram dificuldades aos pesquisadores na utilização de ferramentas.
-
-Com isto em mente será feita uma caracterização das ferramentas
-desenvolvidas nos últimos 15 anos de pesquisas em engenharia de software no
-Brasil, esta caracterização ocorrerá através de uma revisão sistemática de
-literatura de trabalhos submetidos ao Simpósio Brasileiro de Engenharia de
-Software (SBES), tal revisão será guiada a partir das seguintes questões sobre
-cada ferramenta:
-
-\begin{itemize}
-\item Quando foi lançada publicamente?
-\item Quando recebeu sua última atualização?
+\item Quando foi publicada?
 \item Qual pesquisador desenvolveu?
 \item Qual grupo de pesquisa desenvolveu?
-\item Dá suporte para quais sistemas operacionais?
+\item Oferece para a quais sistemas operacionais?
 \item Em qual linguagem de programação foi escrita?
-\item Em quais momentos foi utilizada após o lançamento?
-\item Qual pesquisador utilizou após o lançamento?
-\item Quais grupos de pesquisa utilizaram após o lançamento?
 \item Qual problema resolve, qual o domínio?
-\item É utilizada fora do seu grupo de pesquisa?
-\item É utilizada fora da comunidade acadêmica? É adotada pela indústria?
 \item É derivada ou é extensão de alguma outra ferramenta?
-\item Tem cobertura de testes?
-\item Qual o nível da cobertura de testes?
-\item Tem documentação?
-\item Em quais idiomas a documentação está disponível?
 \item Como se deu a evolução histórica das ferramentas em quantidade, autores
   e organizações no SBES? (questão adaptada do trabalho de
   \cite{Cavalcanti11})
@@ -137,28 +130,28 @@ cada ferramenta:
   ferramenta?
 \end{itemize}
 
-Esta caracterização dará uma visão geral sobre as ferramentas desenvolvidas em
-pesquisas de engenharia de software no Brasil, bem como permitirá entender
-aspectos do ciclo de vida de cada ferramenta.
+Esta caracterização dará uma visão geral das {\it ferramentas de pesquisa}
+em engenharia de software no Brasil, bem como permitirá evidenciar fatores que
+causam dificuldades enfrentadas pelos pesquisadores no uso das mesmas.
 
-\section{Metodologia}
-
-\begin{itemize}
-\item Levantar revisões sistemáticas de literatura de engenharia de software\\
-        {\it pode haver algum estudo anterior com a mesma abordagem e que
-        responda ao mesmo problema}
-\item Levantar revisões sistemáticas de literatura sobre ferramentas de
-        engenharia de software\\
-        {\it pode existir estudos similares ou complementares}
-\item Iniciar revisão sistemática de literatura para responder ao problema
-        definido\\
-        {\it buscar estudos dos últimos 15 anos de pesquisas em engenharia de
-        software}
-\end{itemize}
-
-\section{Conclusão}
-
-\ldots
+%\section{Metodologia}
+%
+%\begin{itemize}
+%\item Levantar revisões sistemáticas de literatura de engenharia de software\\
+%        {\it pode haver algum estudo anterior com a mesma abordagem e que
+%        responda ao mesmo problema}
+%\item Levantar revisões sistemáticas de literatura sobre ferramentas de
+%        engenharia de software\\
+%        {\it pode existir estudos similares ou complementares}
+%\item Iniciar revisão sistemática de literatura para responder ao problema
+%        definido\\
+%        {\it buscar estudos dos últimos 15 anos de pesquisas em engenharia de
+%        software}
+%\end{itemize}
+%
+%\section{Conclusão}
+%
+%\ldots
 
 %Kon \cite{Kon11} conclui que construir ferramentas como software livre gera
 %transferencia de tecnologia em várias vias, uma delas é que proporciona
